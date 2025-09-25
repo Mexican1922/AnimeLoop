@@ -198,6 +198,7 @@ form input {
   }
   .navbar {
     width: 100%;
+    height: auto;
   }
 
   .logo {
@@ -459,7 +460,7 @@ main {
   padding: 60px 5%;
   display: flex;
   align-items: center;
-
+  justify-content: center; /* center for wide screens */
   gap: 20px;
   min-height: 70vh;
   text-align: left;
@@ -484,6 +485,12 @@ main {
   margin: 20px 0;
 }
 
+.sub-header-text .coming-soon {
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  font-weight: 600;
+  margin: 20px 0;
+}
+
 .sub-header-text .tags {
   list-style: none;
   display: flex;
@@ -498,8 +505,8 @@ main {
   padding: 8px 16px;
   border-radius: 6px;
   transition: all 0.3s ease;
-  border: 2px solid #fff;
-  color: #fff;
+  border: 2px solid #b4b4b4;
+  color: #b4b4b4;
   text-decoration: none;
 }
 
@@ -534,9 +541,9 @@ main {
 /* --- RESPONSIVE BREAKPOINTS --- */
 @media (max-width: 1024px) {
   .sub-header {
-    padding: 40px 5%;
-    text-align: center;
     flex-direction: column;
+    text-align: center;
+    padding: 40px 5%;
   }
 
   .sub-header-text {
@@ -557,7 +564,11 @@ main {
   }
 
   .sub-header-text .title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+  }
+
+  .sub-header-text .genre {
+    font-size: 1rem;
   }
 
   .sub-header-text span {

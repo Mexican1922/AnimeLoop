@@ -1,5 +1,5 @@
 // script.js
-// JavaScript for toggling the navigation menu on smaller screens
+// Hamburger toggle
 const menuToggle = document.querySelector(".menu-toggle");
 const navbar = document.querySelector(".navbar");
 const icon = menuToggle.querySelector("i");
@@ -14,6 +14,22 @@ menuToggle.addEventListener("click", () => {
   } else {
     icon.classList.remove("fa-xmark");
     icon.classList.add("fa-bars");
+  }
+});
+
+// Pages dropdown toggle
+const pagesLink = document.getElementById("pagesLink");
+const pagesDropdown = document.getElementById("pagesDropdown");
+
+pagesLink.addEventListener("click", function (e) {
+  e.preventDefault();
+  pagesDropdown.classList.toggle("show-dropdown");
+});
+
+// Close dropdown if clicking outside
+window.addEventListener("click", function (e) {
+  if (!e.target.closest(".pages")) {
+    pagesDropdown.classList.remove("show-dropdown");
   }
 });
 
@@ -47,42 +63,6 @@ setInterval(() => {
   showSlide(current);
 }, 9000); // every 7 seconds
 // Initial display
-
-// JavaScript for dropdown menus
-document.querySelectorAll(".menu-icon").forEach((icon) => {
-  icon.addEventListener("click", (e) => {
-    e.stopPropagation();
-    const menu = icon.parentElement;
-    menu.classList.toggle("open");
-
-    // close others
-    document.querySelectorAll(".menu").forEach((m) => {
-      if (m !== menu) m.classList.remove("open");
-    });
-  });
-});
-
-document.addEventListener("click", () => {
-  document.querySelectorAll(".menu").forEach((m) => m.classList.remove("open"));
-});
-
-// Toggle Page dropdown on click
-// Toggle dropdown on click
-const pagesLink = document.getElementById("pagesLink");
-const pagesDropdown = document.getElementById("pagesDropdown");
-
-pagesLink.addEventListener("click", function (e) {
-  e.preventDefault(); // stop jumping to #
-  pagesDropdown.classList.toggle("show-dropdown");
-});
-
-// Close Page dropdown on click
-// Close dropdown if clicking outside
-window.addEventListener("click", function (e) {
-  if (!e.target.closest(".pages")) {
-    pagesDropdown.classList.remove("show-dropdown");
-  }
-});
 
 // JavaScript for weekly schedule navigation
 document.addEventListener("DOMContentLoaded", () => {
