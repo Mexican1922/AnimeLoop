@@ -75,6 +75,22 @@ const episodeSources = {
       type: "iframe",
       src: "https://animekai.bz/watch/my-hero-academia-season-6-lgxl#ep=4",
     },
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-5-lgxl#ep=2",
+    },
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-5-lgxl#ep=2",
+    },
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-5-lgxl#ep=2",
+    },
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-5-lgxl#ep=2",
+    },
   ],
   6: [
     {
@@ -100,6 +116,144 @@ const episodeSources = {
     {
       type: "iframe",
       src: "https://animekai.bz/watch/my-hero-academia-season-5-lgxl#ep=1",
+    },
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-5-lgxl#ep=2",
+    },
+  ],
+  4: [
+    {
+      type: "video",
+      src: "https://www.dropbox.com/scl/fi/xr5dthbm2lcb7z5z266k6/videoplayback.mp4?rlkey=vziizti083glhm02e8d2ne5hr&raw=1",
+      download:
+        "https://www.dropbox.com/scl/fi/xr5dthbm2lcb7z5z266k6/videoplayback.mp4?rlkey=vziizti083glhm02e8d2ne5hr&dl=1",
+    }, // Episode 1
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-6-lgxl#ep=2",
+    },
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-6-lgxl#ep=3",
+    },
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-6-lgxl#ep=4",
+    },
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-6-lgxl#ep=4",
+    },
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-6-lgxl#ep=4",
+    },
+  ],
+  3: [
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-5-lgxl#ep=1",
+    },
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-5-lgxl#ep=2",
+    },
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-5-lgxl#ep=2",
+    },
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-5-lgxl#ep=2",
+    },
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-5-lgxl#ep=2",
+    },
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-5-lgxl#ep=2",
+    },
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-5-lgxl#ep=2",
+    },
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-5-lgxl#ep=2",
+    },
+  ],
+  2: [
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-5-lgxl#ep=1",
+    },
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-5-lgxl#ep=2",
+    },
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-5-lgxl#ep=2",
+    },
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-5-lgxl#ep=2",
+    },
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-5-lgxl#ep=2",
+    },
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-5-lgxl#ep=2",
+    },
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-5-lgxl#ep=2",
+    },
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-5-lgxl#ep=2",
+    },
+  ],
+  1: [
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-5-lgxl#ep=1",
+    },
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-5-lgxl#ep=2",
+    },
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-5-lgxl#ep=2",
+    },
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-5-lgxl#ep=2",
+    },
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-5-lgxl#ep=2",
+    },
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-5-lgxl#ep=2",
+    },
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-5-lgxl#ep=2",
+    },
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-5-lgxl#ep=2",
+    },
+    {
+      type: "iframe",
+      src: "https://animekai.bz/watch/my-hero-academia-season-5-lgxl#ep=2",
     },
     {
       type: "iframe",

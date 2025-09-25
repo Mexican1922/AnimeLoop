@@ -190,6 +190,56 @@ form input::placeholder {
   }
 }
 
+/* Tablet screens */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-items {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    background: #1a1a1a;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+  }
+
+  .navbar.active .menu-items {
+    display: flex;
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .search-auth {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .search-auth ul {
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .search-auth ul li a {
+    text-align: center;
+  }
+}
+
 /* Animation for dropdown */
 @keyframes slideDown {
   from {
