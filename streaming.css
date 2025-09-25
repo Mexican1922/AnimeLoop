@@ -246,6 +246,12 @@ main {
   color: #f5cf49;
 }
 
+@media (max-width: 768px) {
+  .blog-top p {
+    font-size: 12px;
+  }
+}
+
 .watch-container {
   display: flex;
   gap: 20px;
@@ -935,6 +941,9 @@ ul.episode-list a.active {
   .server-buttons button {
     width: 50px;
     font-size: 0.6rem;
+  }
+  .plot {
+    font-size: 12px;
   }
 }
 
