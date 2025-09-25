@@ -23,482 +23,501 @@
     />
   </head>
   <body>
-    <nav class="navbar">
-      <div class="logo">
-        <a href="index.html"
-          ><img src="Images/logo.png" alt="Anime Loop Logo"
-        /></a>
-      </div>
+    <!-- Loading Screen -->
+    <div id="loader">
+      <div class="spinner"></div>
+      <img src="Images/Anime-loop-preloader-white.gif" alt="Loading Image" />
+    </div>
 
-      <!-- Hamburger -->
-      <div class="menu-toggle">
-        <i class="fa-solid fa-bars"></i>
-      </div>
-
-      <!-- Collapsible Menu -->
-      <div class="menu-items">
-        <div class="nav-links">
-          <ul>
-            <li><a href="index.html" class="home">Home</a></li>
-            <li><a href="blog.html" class="movie">Blog</a></li>
-            <li><a href="manga.html" class="manga">Manga</a></li>
-            <li><a href="#" class="pages">Pages</a></li>
-          </ul>
+    <!-- Main Content -->
+    <div id="content" style="display: none">
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="Images/logo.png" alt="Anime Loop Logo"
+          /></a>
         </div>
 
-        <!-- Search + Auth inside menu -->
-        <div class="search-auth">
-          <form action="search.html">
-            <span><i class="fa-solid fa-magnifying-glass"></i></span>
-            <input type="text" placeholder="Search" />
-          </form>
-          <ul>
-            <li><a href="sign.html" class="sign-up">SIGN UP</a></li>
-            <li><a href="log.html" class="log-in">LOG IN</a></li>
-          </ul>
+        <!-- Hamburger -->
+        <div class="menu-toggle">
+          <i class="fa-solid fa-bars"></i>
         </div>
-      </div>
-    </nav>
 
-    <main>
-      <div class="blog-top">
-        <p>
-          <a href="index.html">Anime</a>&ensp;&ensp; /
-          <a href="search.html"><span>&ensp;&ensp; Listing</span></a
-          >&ensp;&ensp; /
-          <span class="active">&ensp;&ensp; Streaming Season</span>
-        </p>
-      </div>
-
-      <section class="watch-container">
-        <!-- Left Video Box -->
-        <div class="video-box">
-          <img src="Images/video-img.png" alt="Anime Poster" id="posterImage" />
-          <div class="play-overlay" id="playEpisodeOverlay">
-            <i class="fa-solid fa-play play"></i>
+        <!-- Collapsible Menu -->
+        <div class="menu-items">
+          <div class="nav-links">
+            <ul>
+              <li><a href="index.html" class="home">Home</a></li>
+              <li><a href="blog.html" class="movie">Blog</a></li>
+              <li><a href="manga.html" class="manga">Manga</a></li>
+              <li><a href="#" class="pages">Pages</a></li>
+            </ul>
           </div>
-          <div
-            id="episodeEmbed"
-            style="
-              display: none;
-              width: 100%;
-              border-radius: 12px;
-              overflow: hidden;
-              position: relative;
-            "
-          >
-            <button
-              id="closeEpisode"
+
+          <!-- Search + Auth inside menu -->
+          <div class="search-auth">
+            <form action="search.html">
+              <span><i class="fa-solid fa-magnifying-glass"></i></span>
+              <input type="text" placeholder="Search" />
+            </form>
+            <ul>
+              <li><a href="sign.html" class="sign-up">SIGN UP</a></li>
+              <li><a href="log.html" class="log-in">LOG IN</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <main>
+        <div class="blog-top">
+          <p>
+            <a href="index.html">Anime</a>&ensp;&ensp; /
+            <a href="search.html"><span>&ensp;&ensp; Listing</span></a
+            >&ensp;&ensp; /
+            <span class="active">&ensp;&ensp; Streaming Season</span>
+          </p>
+        </div>
+
+        <section class="watch-container">
+          <!-- Left Video Box -->
+          <div class="video-box">
+            <img
+              src="Images/video-img.png"
+              alt="Anime Poster"
+              id="posterImage"
+            />
+            <div class="play-overlay" id="playEpisodeOverlay">
+              <i class="fa-solid fa-play play"></i>
+            </div>
+            <div
+              id="episodeEmbed"
               style="
-                position: absolute;
-                top: 10px;
-                right: 10px;
-                background: rgba(0, 0, 0, 0.7);
-                color: #fff;
-                border: none;
-                padding: 8px 12px;
-                border-radius: 6px;
-                cursor: pointer;
-                z-index: 20;
+                display: none;
+                width: 100%;
+                border-radius: 12px;
+                overflow: hidden;
+                position: relative;
               "
             >
-              ✖
-            </button>
+              <button
+                id="closeEpisode"
+                style="
+                  position: absolute;
+                  top: 10px;
+                  right: 10px;
+                  background: rgba(0, 0, 0, 0.7);
+                  color: #fff;
+                  border: none;
+                  padding: 8px 12px;
+                  border-radius: 6px;
+                  cursor: pointer;
+                  z-index: 20;
+                "
+              >
+                ✖
+              </button>
 
-            <!-- Local file player -->
-            <video
-              id="episodeVideo"
-              width="100%"
-              height="315"
-              controls
-              style="display: none; border-radius: 12px"
-            >
-              <source
-                src="https://www.dropbox.com/scl/fi/xr5dthbm2lcb7z5z266k6/videoplayback.mp4?rlkey=vziizti083glhm02e8d2ne5hr&st=gghlm3hb&raw=1"
-                type="video/mp4"
-              />
-              Your browser does not support HTML5 video.
-            </video>
+              <!-- Local file player -->
+              <video
+                id="episodeVideo"
+                width="100%"
+                height="315"
+                controls
+                style="display: none; border-radius: 12px"
+              >
+                <source
+                  src="https://www.dropbox.com/scl/fi/xr5dthbm2lcb7z5z266k6/videoplayback.mp4?rlkey=vziizti083glhm02e8d2ne5hr&st=gghlm3hb&raw=1"
+                  type="video/mp4"
+                />
+                Your browser does not support HTML5 video.
+              </video>
 
-            <!-- Streaming iframe -->
-            <iframe
-              id="episodeFrame"
-              width="100%"
-              height="315"
-              src=""
-              frameborder="0"
-              allow="autoplay; encrypted-media"
-              allowfullscreen
+              <!-- Streaming iframe -->
+              <iframe
+                id="episodeFrame"
+                width="100%"
+                height="315"
+                src=""
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+                style="display: none"
+              ></iframe>
+            </div>
+          </div>
+          <!-- Right Episodes -->
+          <aside class="episode-panel">
+            <div class="panel-header">
+              <span class="season-label">Season</span>
+              <div class="season-dropdown" id="seasonDropdown">
+                <button class="dropdown-btn">Season 7 ▾</button>
+                <ul class="dropdown-menu">
+                  <li data-value="6">Season 7</li>
+                  <li data-value="6">Season 6</li>
+                  <li data-value="5">Season 5</li>
+                  <li data-value="4">Season 4</li>
+                  <li data-value="3">Season 3</li>
+                  <li data-value="2">Season 2</li>
+                  <li data-value="1">Season 1</li>
+                </ul>
+              </div>
+            </div>
+            <ul class="episode-list" id="episodeContainer">
+              <li><a href="#" class="active">Episode 01</a></li>
+              <li><a href="#">Episode 02</a></li>
+              <li><a href="#">Episode 03</a></li>
+              <li><a href="#">Episode 04</a></li>
+              <li><a href="#">Episode 05</a></li>
+              <li><a href="#">Episode 06</a></li>
+              <li><a href="#">Episode 07</a></li>
+              <li><a href="#">Episode 08</a></li>
+              <li><a href="#">Episode 09</a></li>
+              <li><a href="#">Episode 10</a></li>
+              <li><a href="#">Episode 11</a></li>
+              <li><a href="#">Episode 12</a></li>
+            </ul>
+          </aside>
+        </section>
+        <section class="anime-details">
+          <!-- Trailer / Visual -->
+          <div class="trailer-box">
+            <img
+              src="Images/trailer-img.png"
+              alt="My Hero Academia S6 Trailer"
+              id="trailerPosterImage"
+            />
+            <div class="trailer-overlay" id="playTrailerOverlay">
+              <i class="fa-solid fa-play"></i> <span>Watch Trailer</span>
+            </div>
+
+            <!-- Wrapper for responsive iframe -->
+            <div
+              class="trailer-iframe-wrapper"
+              id="trailerWrapper"
               style="display: none"
-            ></iframe>
-          </div>
-        </div>
-        <!-- Right Episodes -->
-        <aside class="episode-panel">
-          <div class="panel-header">
-            <span class="season-label">Season</span>
-            <div class="season-dropdown" id="seasonDropdown">
-              <button class="dropdown-btn">Season 7 ▾</button>
-              <ul class="dropdown-menu">
-                <li data-value="6">Season 7</li>
-                <li data-value="6">Season 6</li>
-                <li data-value="5">Season 5</li>
-                <li data-value="4">Season 4</li>
-                <li data-value="3">Season 3</li>
-                <li data-value="2">Season 2</li>
-                <li data-value="1">Season 1</li>
-              </ul>
-            </div>
-          </div>
-          <ul class="episode-list" id="episodeContainer">
-            <li><a href="#" class="active">Episode 01</a></li>
-            <li><a href="#">Episode 02</a></li>
-            <li><a href="#">Episode 03</a></li>
-            <li><a href="#">Episode 04</a></li>
-            <li><a href="#">Episode 05</a></li>
-            <li><a href="#">Episode 06</a></li>
-            <li><a href="#">Episode 07</a></li>
-            <li><a href="#">Episode 08</a></li>
-            <li><a href="#">Episode 09</a></li>
-            <li><a href="#">Episode 10</a></li>
-            <li><a href="#">Episode 11</a></li>
-            <li><a href="#">Episode 12</a></li>
-          </ul>
-        </aside>
-      </section>
-      <section class="anime-details">
-        <!-- Trailer / Visual -->
-        <div class="trailer-box">
-          <img
-            src="Images/trailer-img.png"
-            alt="My Hero Academia S6 Trailer"
-            id="trailerPosterImage"
-          />
-          <div class="trailer-overlay" id="playTrailerOverlay">
-            <i class="fa-solid fa-play"></i> <span>Watch Trailer</span>
-          </div>
-
-          <!-- Wrapper for responsive iframe -->
-          <div
-            class="trailer-iframe-wrapper"
-            id="trailerWrapper"
-            style="display: none"
-          >
-            <button id="closeTrailerBtn">✖</button>
-            <iframe
-              id="trailerIframe"
-              src=""
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </div>
-
-        <!-- Info & Server Buttons -->
-        <div class="info-box">
-          <!-- Server / SUB DUB row -->
-          <div class="server-row">
-            <p>You're watching Season 07</p>
-            <div class="server-buttons sub">
-              <span>SUB</span>
-              <button class="server btn-active">Server 1</button>
-              <button class="server">Server 2</button>
-              <button class="server">Server 3</button>
-              <button class="server">Server 4</button>
-              <button class="server">Server 5</button>
-            </div>
-            <div class="server-buttons dub">
-              <span>DUB</span>
-              <button class="server btn-active">Server 1</button>
-              <button class="server">Server 2</button>
-              <button class="server">Server 3</button>
-              <button class="server">Server 4</button>
-              <button class="server">Server 5</button>
-            </div>
-          </div>
-          <h2>My Hero Academia</h2>
-          <div class="season-row">
-            <p>Season 07</p>
-            <span class="menu">
-              <i class="fa-solid fa-list menu-icon"></i>
-              <span class="dropdown">
-                <a href="#"><i class="fa-regular fa-clock"></i> Watch Later</a>
-                <a href="#"><i class="fa-solid fa-plus"></i> Add to Playlist</a>
-                <a href="#"
-                  ><i class="fa-solid fa-download"></i> Download Season</a
-                >
-              </span>
-            </span>
-          </div>
-          <p class="plot-title">Plot Summary</p>
-          <p class="plot">
-            The sixth season covers the “Paranormal Liberation War” and “Dark
-            Hero” arcs from the manga. Heroes (including UA students) face off
-            against the villains of the Paranormal Liberation Front led by
-            Tomura Shigaraki. After the war, heroes deal with the aftermath,
-            public trust, and the revelations surrounding One For All, forcing
-            Izuku Midoriya into difficult choices as both hero and student.
-          </p>
-          <div class="ratings">
-            <div class="rating-box">
-              <h4>RATE THE SHOW</h4>
-              <p>Your Rating: <strong>__/10</strong></p>
-            </div>
-            <div class="rating-box">
-              <h4>IMDB RATING</h4>
-              <p>Rating: <strong>7.8/10</strong></p>
-            </div>
-            <div class="rating-box">
-              <h4>ROTTEN TOMATO</h4>
-              <p>Rating: <strong>83%</strong></p>
-            </div>
-          </div>
-          <!-- Download button -->
-          <div class="download-box">
-            <a
-              id="downloadBtn"
-              href="https://www.dropbox.com/scl/fi/xr5dthbm2lcb7z5z266k6/videoplayback.mp4?rlkey=vziizti083glhm02e8d2ne5hr&raw=1"
-              download
-              class="download-btn"
             >
-              <i class="fa-solid fa-download"></i> DOWNLOAD NOW
-            </a>
-            <span class="rating">RATING: 7.8 /10</span>
-          </div>
-        </div>
-        <!-- Technical Details -->
-        <aside class="tech-box">
-          <h3>Tech Detail</h3>
-          <ul>
-            <li><strong>Type:</strong> TV</li>
-            <li>
-              <strong>Studio:</strong> <span class="highlight">Bones</span>
-            </li>
-            <li><strong>Release:</strong> Oct 1, 2018 – Mar 25, 2024</li>
-            <li><strong>Episodes:</strong> 25</li>
-            <li>
-              <strong>Status:</strong> <span class="highlight">Completed</span>
-            </li>
-            <li><strong>Genre:</strong> Action, Superhero, Fantasy</li>
-          </ul>
-        </aside>
-      </section>
-
-      <section class="container">
-        <!-- COMMENTS -->
-        <div class="comments-section">
-          <h3>COMMENTS</h3>
-          <p class="note">
-            We hope you have a good time browsing the comment section!<br />
-            Please read our
-            <span style="color: #f5cf49">Comment Policy</span> before
-            commenting.
-          </p>
-
-          <!-- Add Comment Box -->
-          <div class="comment-box">
-            <img src="Images/comment-img.png" alt="User" />
-            <input type="text" placeholder="Join the discussion..." />
-            <button>Post</button>
-          </div>
-
-          <!-- Comment -->
-          <div class="comment">
-            <img src="Images/comment-img-2.png" alt="User" />
-            <div class="comment-body">
-              <div class="comment-header">
-                @username <span>5 minutes ago</span>
-              </div>
-              <div class="comment-text">
-                At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                blanditiis praesentium.
-              </div>
-              <div class="comment-actions">
-                <div><i class="fa-solid fa-thumbs-up"></i> Like</div>
-                <div><i class="fa-solid fa-reply"></i> Reply</div>
-              </div>
+              <button id="closeTrailerBtn">✖</button>
+              <iframe
+                id="trailerIframe"
+                src=""
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
             </div>
           </div>
 
-          <!-- Comment with replies -->
-          <div class="comment">
-            <img src="Images/comment-img-3.png" alt="User" />
-            <div class="comment-body">
-              <div class="comment-header">
-                @username <span>5 minutes ago</span>
+          <!-- Info & Server Buttons -->
+          <div class="info-box">
+            <!-- Server / SUB DUB row -->
+            <div class="server-row">
+              <p>You're watching Season 07</p>
+              <div class="server-buttons sub">
+                <span>SUB</span>
+                <button class="server btn-active">Server 1</button>
+                <button class="server">Server 2</button>
+                <button class="server">Server 3</button>
+                <button class="server">Server 4</button>
+                <button class="server">Server 5</button>
               </div>
-              <div class="comment-text">
-                At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                blanditiis praesentium.
+              <div class="server-buttons dub">
+                <span>DUB</span>
+                <button class="server btn-active">Server 1</button>
+                <button class="server">Server 2</button>
+                <button class="server">Server 3</button>
+                <button class="server">Server 4</button>
+                <button class="server">Server 5</button>
               </div>
-              <div class="comment-actions">
-                <div><i class="fa-solid fa-thumbs-up"></i> Like</div>
-                <div><i class="fa-solid fa-reply"></i> Reply</div>
+            </div>
+            <h2>My Hero Academia</h2>
+            <div class="season-row">
+              <p>Season 07</p>
+              <span class="menu">
+                <i class="fa-solid fa-list menu-icon"></i>
+                <span class="dropdown">
+                  <a href="#"
+                    ><i class="fa-regular fa-clock"></i> Watch Later</a
+                  >
+                  <a href="#"
+                    ><i class="fa-solid fa-plus"></i> Add to Playlist</a
+                  >
+                  <a href="#"
+                    ><i class="fa-solid fa-download"></i> Download Season</a
+                  >
+                </span>
+              </span>
+            </div>
+            <p class="plot-title">Plot Summary</p>
+            <p class="plot">
+              The sixth season covers the “Paranormal Liberation War” and “Dark
+              Hero” arcs from the manga. Heroes (including UA students) face off
+              against the villains of the Paranormal Liberation Front led by
+              Tomura Shigaraki. After the war, heroes deal with the aftermath,
+              public trust, and the revelations surrounding One For All, forcing
+              Izuku Midoriya into difficult choices as both hero and student.
+            </p>
+            <div class="ratings">
+              <div class="rating-box">
+                <h4>RATE THE SHOW</h4>
+                <p>Your Rating: <strong>__/10</strong></p>
               </div>
+              <div class="rating-box">
+                <h4>IMDB RATING</h4>
+                <p>Rating: <strong>7.8/10</strong></p>
+              </div>
+              <div class="rating-box">
+                <h4>ROTTEN TOMATO</h4>
+                <p>Rating: <strong>83%</strong></p>
+              </div>
+            </div>
+            <!-- Download button -->
+            <div class="download-box">
+              <a
+                id="downloadBtn"
+                href="https://www.dropbox.com/scl/fi/xr5dthbm2lcb7z5z266k6/videoplayback.mp4?rlkey=vziizti083glhm02e8d2ne5hr&raw=1"
+                download
+                class="download-btn"
+              >
+                <i class="fa-solid fa-download"></i> DOWNLOAD NOW
+              </a>
+              <span class="rating">RATING: 7.8 /10</span>
+            </div>
+          </div>
+          <!-- Technical Details -->
+          <aside class="tech-box">
+            <h3>Tech Detail</h3>
+            <ul>
+              <li><strong>Type:</strong> TV</li>
+              <li>
+                <strong>Studio:</strong> <span class="highlight">Bones</span>
+              </li>
+              <li><strong>Release:</strong> Oct 1, 2018 – Mar 25, 2024</li>
+              <li><strong>Episodes:</strong> 25</li>
+              <li>
+                <strong>Status:</strong>
+                <span class="highlight">Completed</span>
+              </li>
+              <li><strong>Genre:</strong> Action, Superhero, Fantasy</li>
+            </ul>
+          </aside>
+        </section>
 
-              <!-- Toggle Replies -->
-              <div class="view-replies">
-                <i class="fa-solid fa-angle-down"></i> 40 Replies
+        <section class="container">
+          <!-- COMMENTS -->
+          <div class="comments-section">
+            <h3>COMMENTS</h3>
+            <p class="note">
+              We hope you have a good time browsing the comment section!<br />
+              Please read our
+              <span style="color: #f5cf49">Comment Policy</span> before
+              commenting.
+            </p>
+
+            <!-- Add Comment Box -->
+            <div class="comment-box">
+              <img src="Images/comment-img.png" alt="User" />
+              <input type="text" placeholder="Join the discussion..." />
+              <button>Post</button>
+            </div>
+
+            <!-- Comment -->
+            <div class="comment">
+              <img src="Images/comment-img-2.png" alt="User" />
+              <div class="comment-body">
+                <div class="comment-header">
+                  @username <span>5 minutes ago</span>
+                </div>
+                <div class="comment-text">
+                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                  blanditiis praesentium.
+                </div>
+                <div class="comment-actions">
+                  <div><i class="fa-solid fa-thumbs-up"></i> Like</div>
+                  <div><i class="fa-solid fa-reply"></i> Reply</div>
+                </div>
               </div>
-              <div class="replies">
-                <div class="comment">
-                  <img src="Images/comment-img-sm-2.png" alt="User" />
-                  <div class="comment-body">
-                    <div class="comment-header">
-                      @username <span>3 minutes ago</span>
-                    </div>
-                    <div class="comment-text">
-                      Nested reply example content goes here.
-                    </div>
-                    <div class="comment-actions">
-                      <div><i class="fa-solid fa-thumbs-up"></i> Like</div>
-                      <div><i class="fa-solid fa-reply"></i> Reply</div>
+            </div>
+
+            <!-- Comment with replies -->
+            <div class="comment">
+              <img src="Images/comment-img-3.png" alt="User" />
+              <div class="comment-body">
+                <div class="comment-header">
+                  @username <span>5 minutes ago</span>
+                </div>
+                <div class="comment-text">
+                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                  blanditiis praesentium.
+                </div>
+                <div class="comment-actions">
+                  <div><i class="fa-solid fa-thumbs-up"></i> Like</div>
+                  <div><i class="fa-solid fa-reply"></i> Reply</div>
+                </div>
+
+                <!-- Toggle Replies -->
+                <div class="view-replies">
+                  <i class="fa-solid fa-angle-down"></i> 40 Replies
+                </div>
+                <div class="replies">
+                  <div class="comment">
+                    <img src="Images/comment-img-sm-2.png" alt="User" />
+                    <div class="comment-body">
+                      <div class="comment-header">
+                        @username <span>3 minutes ago</span>
+                      </div>
+                      <div class="comment-text">
+                        Nested reply example content goes here.
+                      </div>
+                      <div class="comment-actions">
+                        <div><i class="fa-solid fa-thumbs-up"></i> Like</div>
+                        <div><i class="fa-solid fa-reply"></i> Reply</div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            <!-- Load more button -->
+            <div class="load-more">Load More Comment</div>
           </div>
 
-          <!-- Load more button -->
-          <div class="load-more">Load More Comment</div>
+          <!-- SIMILAR -->
+          <div class="similar">
+            <h3>SIMILAR</h3>
+
+            <div class="similar-item">
+              <img src="Images/anime-img-7.png" alt="Anime" />
+              <div class="similar-info">
+                <h4>86</h4>
+                <div class="tags">
+                  <span class="tag">DUB 8</span>
+                  <span class="tag">SUB 12</span>
+                  <span class="tag tv">TV</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="similar-item">
+              <img src="Images/anime-img-8.png" alt="Anime" />
+              <div class="similar-info">
+                <h4>Re-Zero</h4>
+                <div class="tags">
+                  <span class="tag">DUB 8</span>
+                  <span class="tag">SUB 12</span>
+                  <span class="tag yellow">18+</span>
+                  <span class="tag tv">TV</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Add more anime items as needed -->
+            <div class="similar-item">
+              <img src="Images/anime-img-9.png" alt="Anime" />
+              <div class="similar-info">
+                <h4>Tokyo Ghoul</h4>
+                <div class="tags">
+                  <span class="tag">DUB 8</span>
+                  <span class="tag">SUB 12</span>
+                  <span class="tag tv">TV</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="similar-item">
+              <img src="Images/anime-img-11.png" alt="Anime" />
+              <div class="similar-info">
+                <h4>Sword Alocization</h4>
+                <div class="tags">
+                  <span class="tag">DUB 8</span>
+                  <span class="tag">SUB 12</span>
+                  <span class="tag tv">TV</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="similar-item">
+              <img src="Images/anime-img-1.png" alt="Anime" />
+              <div class="similar-info">
+                <h4>86</h4>
+                <div class="tags">
+                  <span class="tag">DUB 8</span>
+                  <span class="tag">SUB 12</span>
+                  <span class="tag tv">TV</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="similar-item">
+              <img src="Images/anime-img-12.png" alt="Anime" />
+              <div class="similar-info">
+                <h4>One piece</h4>
+                <div class="tags">
+                  <span class="tag">DUB 8</span>
+                  <span class="tag">SUB 12</span>
+                  <span class="tag tv">TV</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-content">
+          <!-- Left section -->
+          <div class="footer-left">
+            <a href="index.html" class="footer-logo"
+              ><img src="Images/logo.png" alt="AnimeLoop Logo"
+            /></a>
+            <p class="footer-desc">
+              AnimeLoop is your go-to platform for streaming, discovering, and
+              discussing the latest and greatest anime series and movies. Join
+              our community to stay updated, share your favorites, and connect
+              with fellow fans!
+            </p>
+
+            <div class="footer-social">
+              <h3>JOIN US ON</h3>
+              <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-reddit"></i></a>
+                <a href="#"><i class="fa-brands fa-discord"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right section -->
+          <div class="footer-right">
+            <h3>GET NOTIFIED</h3>
+            <p>Get emails for latest news about anime, and more.</p>
+            <form class="subscribe-form">
+              <input type="email" placeholder="info@example.com" required />
+              <button type="submit">Subscribe</button>
+            </form>
+            <p class="terms">
+              By subscribing you agree to our
+              <a href="#">terms and conditions</a>
+            </p>
+          </div>
         </div>
 
-        <!-- SIMILAR -->
-        <div class="similar">
-          <h3>SIMILAR</h3>
-
-          <div class="similar-item">
-            <img src="Images/anime-img-7.png" alt="Anime" />
-            <div class="similar-info">
-              <h4>86</h4>
-              <div class="tags">
-                <span class="tag">DUB 8</span>
-                <span class="tag">SUB 12</span>
-                <span class="tag tv">TV</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="similar-item">
-            <img src="Images/anime-img-8.png" alt="Anime" />
-            <div class="similar-info">
-              <h4>Re-Zero</h4>
-              <div class="tags">
-                <span class="tag">DUB 8</span>
-                <span class="tag">SUB 12</span>
-                <span class="tag yellow">18+</span>
-                <span class="tag tv">TV</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Add more anime items as needed -->
-          <div class="similar-item">
-            <img src="Images/anime-img-9.png" alt="Anime" />
-            <div class="similar-info">
-              <h4>Tokyo Ghoul</h4>
-              <div class="tags">
-                <span class="tag">DUB 8</span>
-                <span class="tag">SUB 12</span>
-                <span class="tag tv">TV</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="similar-item">
-            <img src="Images/anime-img-11.png" alt="Anime" />
-            <div class="similar-info">
-              <h4>Sword Alocization</h4>
-              <div class="tags">
-                <span class="tag">DUB 8</span>
-                <span class="tag">SUB 12</span>
-                <span class="tag tv">TV</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="similar-item">
-            <img src="Images/anime-img-1.png" alt="Anime" />
-            <div class="similar-info">
-              <h4>86</h4>
-              <div class="tags">
-                <span class="tag">DUB 8</span>
-                <span class="tag">SUB 12</span>
-                <span class="tag tv">TV</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="similar-item">
-            <img src="Images/anime-img-12.png" alt="Anime" />
-            <div class="similar-info">
-              <h4>One piece</h4>
-              <div class="tags">
-                <span class="tag">DUB 8</span>
-                <span class="tag">SUB 12</span>
-                <span class="tag tv">TV</span>
-              </div>
-            </div>
+        <!-- Bottom bar -->
+        <div class="footer-bottom">
+          <p>© 2025 All rights reserved by Valentine.</p>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Comments Policy</a>
           </div>
         </div>
-      </section>
-    </main>
+      </footer>
 
-    <footer class="footer">
-      <div class="footer-content">
-        <!-- Left section -->
-        <div class="footer-left">
-          <a href="index.html" class="footer-logo"
-            ><img src="Images/logo.png" alt="AnimeLoop Logo"
-          /></a>
-          <p class="footer-desc">
-            AnimeLoop is your go-to platform for streaming, discovering, and
-            discussing the latest and greatest anime series and movies. Join our
-            community to stay updated, share your favorites, and connect with
-            fellow fans!
-          </p>
-
-          <div class="footer-social">
-            <h3>JOIN US ON</h3>
-            <div class="social-icons">
-              <a href="#"><i class="fa-brands fa-reddit"></i></a>
-              <a href="#"><i class="fa-brands fa-discord"></i></a>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right section -->
-        <div class="footer-right">
-          <h3>GET NOTIFIED</h3>
-          <p>Get emails for latest news about anime, and more.</p>
-          <form class="subscribe-form">
-            <input type="email" placeholder="info@example.com" required />
-            <button type="submit">Subscribe</button>
-          </form>
-          <p class="terms">
-            By subscribing you agree to our <a href="#">terms and conditions</a>
-          </p>
-        </div>
-      </div>
-
-      <!-- Bottom bar -->
-      <div class="footer-bottom">
-        <p>© 2025 All rights reserved by Valentine.</p>
-        <div class="footer-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Comments Policy</a>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" title="Go to top">
-      <i class="fa-solid fa-angles-up"></i>
-    </button>
+      <!-- Back to Top Button -->
+      <button id="backToTop" title="Go to top">
+        <i class="fa-solid fa-angles-up"></i>
+      </button>
+    </div>
 
     <script src="streaming.js"></script>
   </body>

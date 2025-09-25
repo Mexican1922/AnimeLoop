@@ -20,974 +20,991 @@
     <link rel="stylesheet" href="manga.css" />
   </head>
   <body>
-    <div class="container">
-      <!-- Sidebar Navbar -->
-      <nav class="navbar">
-        <div class="logo">
-          <a href="index.html"
-            ><img src="Images/logo.png" alt="Anime Loop Logo"
-          /></a>
-
-          <!-- Hamburger button -->
-          <div class="hamburger" id="hamburger">
-            <i class="fa fa-bars"></i>
-          </div>
-        </div>
-
-        <!-- Collapsible Menu -->
-        <div class="menu-items" id="menu">
-          <form>
-            <span><i class="fa-solid fa-magnifying-glass"></i></span>
-            <input type="text" placeholder="Search" />
-          </form>
-          <div class="nav-links">
-            <ul>
-              <li><a href="index.html" class="home">Anime</a></li>
-              <li><a href="blog.html" class="blog">Blog</a></li>
-              <li><a href="manga.html" class="manga active">Manga</a></li>
-              <li><a href="#">Pages</a></li>
-            </ul>
-          </div>
-          <div class="search-auth">
-            <ul>
-              <li><a href="sign.html" class="sign-up">SIGN UP</a></li>
-              <li><a href="log.html" class="log-in">LOG IN</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <!-- Manga Section -->
-      <section class="manga-section">
-        <div class="manga-card">
-          <div class="manga-content">
-            <h2>ONE PIECE</h2>
-            <p class="meta">Volume 104 &nbsp; | &nbsp; Chapter 1016</p>
-            <div class="tags">
-              <span class="tag age"><a href="#">PG-13</a></span>
-              <span class="tag"><a href="mangadetail.html">DUB</a></span>
-              <span class="tag"><a href="mangadetail.html">SUB</a></span>
-            </div>
-            <p class="release-date">APRIL 07, 2023</p>
-          </div>
-          <img src="Images/banner-img-4.png" alt="One Piece" />
-        </div>
-
-        <div class="manga-card">
-          <img
-            src="Images/banner-img-5.png"
-            alt="That Time I Got Reincarnated As a Slime"
-          />
-          <div class="manga-content2">
-            <h2>THAT DAY I TURNED TO A SLIME</h2>
-            <p class="meta">Volume 108 &nbsp; | &nbsp; Chapter 996</p>
-            <div class="tags">
-              <span class="tag age"><a href="mangadetail.html">PG-13</a></span>
-              <span class="tag"><a href="mangadetail.html">DUB</a></span>
-              <span class="tag"><a href="mangadetail.html">SUB</a></span>
-            </div>
-            <p class="release-date">OCTOBER 17, 2023</p>
-          </div>
-        </div>
-
-        <div class="manga-card">
-          <div class="manga-content">
-            <h2>SOLO LEVELING</h2>
-            <p class="meta">Volume 100 &nbsp; | &nbsp; Chapter 1009</p>
-            <div class="tags">
-              <span class="tag age"><a href="mangadetail.html">PG-13</a></span>
-              <span class="tag"><a href="mangadetail.html">DUB</a></span>
-              <span class="tag"><a href="mangadetail.html">SUB</a></span>
-            </div>
-            <p class="release-date">APRIL 07, 2023</p>
-          </div>
-          <img src="Images/banner-img-6.png" alt="Solo Leveling" />
-        </div>
-      </section>
+    <!-- Loading Screen -->
+    <div id="loader">
+      <div class="spinner"></div>
+      <img src="Images/Anime-loop-preloader-white.gif" alt="Loading Image" />
     </div>
 
-    <main>
-      <section class="recently-added">
-        <div class="recently-added-title">
-          <h4>POPULAR MANGA</h4>
-          <p>SUNDAY 23 SEPT 2025</p>
+    <!-- Main Content -->
+    <div id="content" style="display: none">
+      <div class="container">
+        <!-- Sidebar Navbar -->
+        <nav class="navbar">
+          <div class="logo">
+            <a href="index.html"
+              ><img src="Images/logo.png" alt="Anime Loop Logo"
+            /></a>
+
+            <!-- Hamburger button -->
+            <div class="hamburger" id="hamburger">
+              <i class="fa fa-bars"></i>
+            </div>
+          </div>
+
+          <!-- Collapsible Menu -->
+          <div class="menu-items" id="menu">
+            <form>
+              <span><i class="fa-solid fa-magnifying-glass"></i></span>
+              <input type="text" placeholder="Search" />
+            </form>
+            <div class="nav-links">
+              <ul>
+                <li><a href="index.html" class="home">Anime</a></li>
+                <li><a href="blog.html" class="blog">Blog</a></li>
+                <li><a href="manga.html" class="manga active">Manga</a></li>
+                <li><a href="#">Pages</a></li>
+              </ul>
+            </div>
+            <div class="search-auth">
+              <ul>
+                <li><a href="sign.html" class="sign-up">SIGN UP</a></li>
+                <li><a href="log.html" class="log-in">LOG IN</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Manga Section -->
+        <section class="manga-section">
+          <div class="manga-card">
+            <div class="manga-content">
+              <h2>ONE PIECE</h2>
+              <p class="meta">Volume 104 &nbsp; | &nbsp; Chapter 1016</p>
+              <div class="tags">
+                <span class="tag age"><a href="#">PG-13</a></span>
+                <span class="tag"><a href="mangadetail.html">DUB</a></span>
+                <span class="tag"><a href="mangadetail.html">SUB</a></span>
+              </div>
+              <p class="release-date">APRIL 07, 2023</p>
+            </div>
+            <img src="Images/banner-img-4.png" alt="One Piece" />
+          </div>
+
+          <div class="manga-card">
+            <img
+              src="Images/banner-img-5.png"
+              alt="That Time I Got Reincarnated As a Slime"
+            />
+            <div class="manga-content2">
+              <h2>THAT DAY I TURNED TO A SLIME</h2>
+              <p class="meta">Volume 108 &nbsp; | &nbsp; Chapter 996</p>
+              <div class="tags">
+                <span class="tag age"
+                  ><a href="mangadetail.html">PG-13</a></span
+                >
+                <span class="tag"><a href="mangadetail.html">DUB</a></span>
+                <span class="tag"><a href="mangadetail.html">SUB</a></span>
+              </div>
+              <p class="release-date">OCTOBER 17, 2023</p>
+            </div>
+          </div>
+
+          <div class="manga-card">
+            <div class="manga-content">
+              <h2>SOLO LEVELING</h2>
+              <p class="meta">Volume 100 &nbsp; | &nbsp; Chapter 1009</p>
+              <div class="tags">
+                <span class="tag age"
+                  ><a href="mangadetail.html">PG-13</a></span
+                >
+                <span class="tag"><a href="mangadetail.html">DUB</a></span>
+                <span class="tag"><a href="mangadetail.html">SUB</a></span>
+              </div>
+              <p class="release-date">APRIL 07, 2023</p>
+            </div>
+            <img src="Images/banner-img-6.png" alt="Solo Leveling" />
+          </div>
+        </section>
+      </div>
+
+      <main>
+        <section class="recently-added">
+          <div class="recently-added-title">
+            <h4>POPULAR MANGA</h4>
+            <p>SUNDAY 23 SEPT 2025</p>
+          </div>
+        </section>
+
+        <section>
+          <div class="anime-grid">
+            <!--  Card -->
+            <div class="anime-card">
+              <a href="mangadetail.html" class="card-link">
+                <img src="Images/manga1.png" alt="Summer Time" />
+                <div class="card-info">
+                  <div class="tags">
+                    <p>Chapter 500</p>
+                  </div>
+                  <p class="anime-title">Summer Time</p>
+                </div>
+              </a>
+              <div class="menu">
+                <i class="fa-solid fa-list menu-icon"></i>
+                <div class="dropdown">
+                  <a href="mangadetail.html"
+                    ><i class="fa-regular fa-clock"></i> Watch Later</a
+                  >
+                  <a href="mangadetail.html"
+                    ><i class="fa-solid fa-plus"></i> Add to Playlist</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Repeat Cards -->
+            <div class="anime-card">
+              <a href="mangadetail.html" class="card-link">
+                <img src="Images/manga2.png" alt="Naruto" />
+                <div class="card-info">
+                  <div class="tags">
+                    <p>Chapter 854</p>
+                  </div>
+                  <p class="anime-title">Naruto</p>
+                </div>
+              </a>
+              <div class="menu">
+                <i class="fa-solid fa-list menu-icon"></i>
+                <div class="dropdown">
+                  <a href="mangadetail.html"
+                    ><i class="fa-regular fa-clock"></i> Watch Later</a
+                  >
+                  <a href="mangadetail.html"
+                    ><i class="fa-solid fa-plus"></i> Add to Playlist</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!--The rest of the anime-cards in the same format -->
+
+            <div class="anime-card">
+              <a href="mangadetail.html" class="card-link">
+                <img src="Images/manga3.png" alt="Spy X Family" />
+                <div class="card-info">
+                  <div class="tags">
+                    <p>Chapter 90</p>
+                  </div>
+                  <p class="anime-title">Spy X Family</p>
+                </div>
+              </a>
+              <div class="menu">
+                <i class="fa-solid fa-list menu-icon"></i>
+                <div class="dropdown">
+                  <a href="mangadetail.html"
+                    ><i class="fa-regular fa-clock"></i> Watch Later</a
+                  >
+                  <a href="mangadetail.html"
+                    ><i class="fa-solid fa-plus"></i> Add to Playlist</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="anime-card">
+              <a href="mangadetail.html" class="card-link">
+                <img src="Images/manga4.png" alt="Bleach" />
+                <div class="card-info">
+                  <div class="tags">
+                    <p>Chapter 35</p>
+                  </div>
+                  <p class="anime-title">Bleach</p>
+                </div>
+              </a>
+              <div class="menu">
+                <i class="fa-solid fa-list menu-icon"></i>
+                <div class="dropdown">
+                  <a href="mangadetail.html"
+                    ><i class="fa-regular fa-clock"></i> Watch Later</a
+                  >
+                  <a href="mangadetail.html"
+                    ><i class="fa-solid fa-plus"></i> Add to Playlist</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="anime-card">
+              <a href="mangadetail.html" class="card-link">
+                <img src="Images/manga5.png" alt="One Piece" />
+                <div class="card-info">
+                  <div class="tags">
+                    <p>Chapter 17</p>
+                  </div>
+                  <p class="anime-title">One Piece</p>
+                </div>
+              </a>
+              <div class="menu">
+                <i class="fa-solid fa-list menu-icon"></i>
+                <div class="dropdown">
+                  <a href="mangadetail.html"
+                    ><i class="fa-regular fa-clock"></i> Watch Later</a
+                  >
+                  <a href="mangadetail.html"
+                    ><i class="fa-solid fa-plus"></i> Add to Playlist</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="anime-card">
+              <a href="mangadetail.html" class="card-link">
+                <img src="Images/manga6.png" alt="My Hero Academia" />
+                <div class="card-info">
+                  <div class="tags">
+                    <p>Chapter 350</p>
+                  </div>
+                  <p class="anime-title">My Hero Academia</p>
+                </div>
+              </a>
+              <div class="menu">
+                <i class="fa-solid fa-list menu-icon"></i>
+                <div class="dropdown">
+                  <a href="mangadetail.html"
+                    ><i class="fa-regular fa-clock"></i> Watch Later</a
+                  >
+                  <a href="mangadetail.html"
+                    ><i class="fa-solid fa-plus"></i> Add to Playlist</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="anime-card">
+              <a href="mangadetail.html" class="card-link">
+                <img src="Images/manga7.png" alt="Dragon Ball Z Super" />
+                <div class="card-info">
+                  <div class="tags">
+                    <p>Chapter 209</p>
+                  </div>
+                  <p class="anime-title">Dragon Ball Z Super</p>
+                </div>
+              </a>
+              <div class="menu">
+                <i class="fa-solid fa-list menu-icon"></i>
+                <div class="dropdown">
+                  <a href="mangadetail.html"
+                    ><i class="fa-regular fa-clock"></i> Watch Later</a
+                  >
+                  <a href="mangadetail.html"
+                    ><i class="fa-solid fa-plus"></i> Add to Playlist</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="anime-card">
+              <a href="mangadetail.html" class="card-link">
+                <img src="Images/manga8.png" alt="Code Geas" />
+                <div class="card-info">
+                  <div class="tags">
+                    <p>Chapter 179</p>
+                  </div>
+                  <p class="anime-title">Code Geas</p>
+                </div>
+              </a>
+              <div class="menu">
+                <i class="fa-solid fa-list menu-icon"></i>
+                <div class="dropdown">
+                  <a href="mangadetail.html"
+                    ><i class="fa-regular fa-clock"></i> Watch Later</a
+                  >
+                  <a href="mangadetail.html"
+                    ><i class="fa-solid fa-plus"></i> Add to Playlist</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <section class="sub-header">
+        <div class="sub-header-text">
+          <h1 class="title">SPY X FAMILY</h1>
+          <ul class="tags">
+            <li><a href="mangadetail.html" class="active">PG-13</a></li>
+            <li><a href="mangadetail.html">DUB</a></li>
+            <li><a href="mangadetail.html">SUB</a></li>
+          </ul>
+          <p class="coming-soon">NEW CHAPTER COMING OUT</p>
+          <p class="countdown">
+            <span>00d</span><span>00h</span><span>00m</span><span>00s</span>
+          </p>
         </div>
       </section>
 
-      <section>
-        <div class="anime-grid">
-          <!--  Card -->
-          <div class="anime-card">
-            <a href="mangadetail.html" class="card-link">
-              <img src="Images/manga1.png" alt="Summer Time" />
-              <div class="card-info">
+      <section class="recently-uploaded-main">
+        <section class="recently-uploaded">
+          <div class="recently-uploaded-title">
+            <h4>RECENTLY UPLOADED</h4>
+            <!-- <p>SUNDAY 23 SEPT 2025</p> -->
+          </div>
+        </section>
+
+        <section>
+          <div class="anime-grid">
+            <!-- Example Card -->
+            <div class="anime-card">
+              <a href="mangadetail.html" class="card-link">
+                <img src="Images/manga9.png" alt="Kiznaiver" />
+                <div class="card-info">
+                  <div class="tags">
+                    <p>Chapter 30</p>
+                  </div>
+                  <p class="anime-title">Kiznaiver</p>
+                </div>
+              </a>
+              <div class="menu">
+                <i class="fa-solid fa-list menu-icon"></i>
+                <div class="dropdown">
+                  <a href="mangadetail.html"
+                    ><i class="fa-regular fa-clock"></i> Watch Later</a
+                  >
+                  <a href="mangadetail.html"
+                    ><i class="fa-solid fa-plus"></i> Add to Playlist</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Repeat -->
+            <div class="anime-card">
+              <a href="mangadetail.html" class="card-link">
+                <img src="Images/manga10.png" alt="Hunter X Hunter" />
+                <div class="card-info">
+                  <div class="tags">
+                    <p>Chapter 240</p>
+                  </div>
+                  <p class="anime-title">Hunter X Hunter</p>
+                </div>
+              </a>
+              <div class="menu">
+                <i class="fa-solid fa-list menu-icon"></i>
+                <div class="dropdown">
+                  <a href="mangadetail.html"
+                    ><i class="fa-regular fa-clock"></i> Watch Later</a
+                  >
+                  <a href="mangadetail.html"
+                    ><i class="fa-solid fa-plus"></i> Add to Playlist</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!--The rest of the anime-cards in the same format -->
+
+            <div class="anime-card">
+              <a href="mangadetail.html" class="card-link">
+                <img src="Images/manga11.png" alt="Full Metal Alchemist" />
+                <div class="card-info">
+                  <div class="tags">
+                    <p>Chapter 21</p>
+                  </div>
+                  <p class="anime-title">Full Metal Alchemist</p>
+                </div>
+              </a>
+              <div class="menu">
+                <i class="fa-solid fa-list menu-icon"></i>
+                <div class="dropdown">
+                  <a href="mangadetail.html"
+                    ><i class="fa-regular fa-clock"></i> Watch Later</a
+                  >
+                  <a href="mangadetail.html"
+                    ><i class="fa-solid fa-plus"></i> Add to Playlist</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="anime-card">
+              <a href="mangadetail.html" class="card-link">
+                <img src="Images/manga12.png" alt="Solo Leveling" />
+                <div class="card-info">
+                  <div class="tags">
+                    <p>Chapter 1009</p>
+                  </div>
+                  <p class="anime-title">Solo Leveling</p>
+                </div>
+              </a>
+              <div class="menu">
+                <i class="fa-solid fa-list menu-icon"></i>
+                <div class="dropdown">
+                  <a href="mangadetail.html"
+                    ><i class="fa-regular fa-clock"></i> Watch Later</a
+                  >
+                  <a href="mangadetail.html"
+                    ><i class="fa-solid fa-plus"></i> Add to Playlist</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="weekly-schedule">
+        <div class="schedule-title">
+          <h4>WEEKLY SCHEDULE</h4>
+        </div>
+        <div class="schedule">
+          <!-- Days Navigation -->
+          <div class="days-nav">
+            <button class="nav-btn">&lt;</button>
+
+            <div class="days">
+              <div class="day active">
+                <span class="date">JAN 1</span>
+                <span class="weekday">SUN</span>
+              </div>
+              <div class="day">
+                <span class="date">JAN 2</span><span class="weekday">MON</span>
+              </div>
+              <div class="day">
+                <span class="date">JAN 3</span><span class="weekday">TUE</span>
+              </div>
+              <div class="day">
+                <span class="date">JAN 4</span><span class="weekday">WED</span>
+              </div>
+              <div class="day">
+                <span class="date">JAN 5</span><span class="weekday">THU</span>
+              </div>
+              <div class="day">
+                <span class="date">JAN 6</span><span class="weekday">FRI</span>
+              </div>
+              <div class="day">
+                <span class="date">JAN 7</span><span class="weekday">SAT</span>
+              </div>
+              <div class="day">
+                <span class="date">JAN 8</span><span class="weekday">SUN</span>
+              </div>
+              <div class="day">
+                <span class="date">JAN 9</span><span class="weekday">MON</span>
+              </div>
+              <div class="day">
+                <span class="date">JAN 10</span><span class="weekday">TUE</span>
+              </div>
+              <div class="day">
+                <span class="date">JAN 11</span><span class="weekday">WED</span>
+              </div>
+              <div class="day">
+                <span class="date">JAN 12</span><span class="weekday">THU</span>
+              </div>
+              <div class="day">
+                <span class="date">JAN 13</span><span class="weekday">FRI</span>
+              </div>
+              <div class="day">
+                <span class="date">JAN 14</span><span class="weekday">SAT</span>
+              </div>
+              <div class="day">
+                <span class="date">JAN 15</span><span class="weekday">SUN</span>
+              </div>
+              <div class="day">
+                <span class="date">JAN 16</span><span class="weekday">MON</span>
+              </div>
+            </div>
+            <button class="nav-btn">&gt;</button>
+          </div>
+
+          <!-- Countdown -->
+          <div class="countdown">
+            <div>
+              <p>Anime Title</p>
+            </div>
+            <div class="countdown-timer">
+              <span>00d</span>
+              <span>00h</span>
+              <span>00m</span>
+              <span>00s</span>
+            </div>
+            <div>
+              <p>Episode</p>
+            </div>
+          </div>
+
+          <!-- Anime List -->
+          <div class="anime-list">
+            <a href="mangadetail.html"
+              ><div class="anime-item">
+                <span class="time">12:00</span>
+                <img src="Images/anime-img-1.png" alt="Darling in the Franxx" />
+                <div class="details">
+                  <h3>Darling in the Franxx!</h3>
+                  <div class="tags">
+                    <span class="tag">DUB 8</span>
+                    <span class="tag">SUB 12</span>
+                  </div>
+                </div>
+
+                <div class="episode-info">
+                  <span>TV</span>
+                  <span class="episode">Episode 04</span>
+                </div>
+              </div></a
+            >
+
+            <a href="mangadetail.html"
+              ><div class="anime-item">
+                <span class="time">14:00</span>
+                <img src="Images/anime-img-2.png" alt="Plastic Memories" />
+                <div class="details">
+                  <h3>Plastic Memories</h3>
+                  <div class="tags">
+                    <span class="tag">DUB 8</span>
+                    <span class="tag">SUB 12</span>
+                  </div>
+                </div>
+                <div class="episode-info">
+                  <span>TV</span>
+                  <span class="episode">Episode 06</span>
+                </div>
+              </div></a
+            >
+
+            <a href="mangadetail.html"
+              ><div class="anime-item">
+                <span class="time">14:00</span>
+                <img src="Images/anime-img-7.png" alt="86" />
+                <div class="details">
+                  <h3>86</h3>
+                  <div class="tags">
+                    <span class="tag">DUB 8</span>
+                    <span class="tag">SUB 12</span>
+                  </div>
+                </div>
+                <div class="episode-info">
+                  <span>TV</span>
+                  <span class="episode">Episode 06</span>
+                </div>
+              </div></a
+            >
+
+            <a href="mangadetail.html"
+              ><div class="anime-item">
+                <span class="time">14:00</span>
+                <img
+                  src="Images/anime-img-3.png"
+                  alt="That Time I Got Reincarnated as a Slime"
+                />
+                <div class="details">
+                  <h3>That Time I Got Reincarnated as a Slime</h3>
+                  <div class="tags">
+                    <span class="tag">DUB 8</span>
+                    <span class="tag">SUB 12</span>
+                  </div>
+                </div>
+                <div class="episode-info">
+                  <span>TV</span>
+                  <span class="episode">Episode 06</span>
+                </div>
+              </div></a
+            >
+
+            <a href="mangadetail.html"
+              ><div class="anime-item">
+                <span class="time">14:00</span>
+                <img
+                  src="Images/anime-img-4.png"
+                  alt="Assassination Classroom"
+                />
+                <div class="details">
+                  <h3>Assassination Classroom</h3>
+                  <div class="tags">
+                    <span class="tag">DUB 8</span>
+                    <span class="tag">SUB 12</span>
+                  </div>
+                </div>
+                <div class="episode-info">
+                  <span>TV</span>
+                  <span class="episode">Episode 06</span>
+                </div>
+              </div></a
+            >
+
+            <div class="anime-item">
+              <span class="time">23:00</span>
+              <img src="Images/anime-img-5.png" alt="Chainsaw Man" />
+              <div class="details">
+                <h3>Chainsaw Man</h3>
                 <div class="tags">
+                  <span class="tag">DUB 8</span>
+                  <span class="tag">SUB 12</span>
+                </div>
+              </div>
+              <div class="episode-info">
+                <span>TV</span>
+                <span class="episode">Episode 12</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid-section" aria-label="Anime lists">
+        <div class="container">
+          <div class="columns" aria-label="Anime lists">
+            <!-- Column 1: Top Rated -->
+            <section class="column" aria-label="Top Rated Anime">
+              <h3 class="column-title">Recently Completed</h3>
+
+              <a href="mangadetail.html" class="cart">
+                <div class="rank">1</div>
+                <img
+                  class="thumb"
+                  src="Images/3fcc3b1b-38c4-493c-baaa-cae66700dbfe.jpeg"
+                  alt="Darling in the Franxx thumbnail"
+                />
+                <div class="info">
+                  <div class="title" title="Solo Leveling">Black Clover</div>
+                  <p>Chapter 8190</p>
+                </div>
+              </a>
+
+              <a href="mangadetail.html" class="cart">
+                <div class="rank" style="color: #a958a5">2</div>
+                <img
+                  class="thumb"
+                  src="Images/MHA Season 5 Key Art 5.jpeg"
+                  alt="Darling in the Franxx thumbnail"
+                />
+                <div class="info">
+                  <div class="title" title="y Hero Academia">
+                    My Hero Academia
+                  </div>
+                  <p>Chapter 4500</p>
+                </div>
+              </a>
+
+              <a href="mangadetail.html" class="cart">
+                <div class="rank">3</div>
+                <img
+                  class="thumb"
+                  src="Images/Vinland Saga_Poster.jpeg"
+                  alt="Vinland Saga"
+                />
+                <div class="info">
+                  <div class="title" title="Vinland Saga">Vinland Saga</div>
+                  <p>Chapter 3000</p>
+                </div>
+              </a>
+
+              <a href="mangadetail.html" class="cart">
+                <div class="rank" style="color: #a958a5">4</div>
+                <img
+                  class="thumb"
+                  src="Images/a9b4ee8e-0f83-4e81-886a-4e406c0cceb4.jpeg"
+                  alt="Bleach"
+                />
+                <div class="info">
+                  <div class="title" title="Bleach">Bleach</div>
+                  <p>Chapter 8090</p>
+                </div>
+              </a>
+
+              <a href="mangadetail.html" class="cart">
+                <div class="rank">5</div>
+                <img
+                  class="thumb"
+                  src="Images/Naruto HD Wallpaper 💙.jpeg"
+                  alt="Naruto"
+                />
+                <div class="info">
+                  <div class="title" title="Naruto">Naruto</div>
+                  <p>Chapter 7850</p>
+                </div>
+              </a>
+
+              <a href="mangadetail.html" class="cart">
+                <div class="rank" style="color: #a958a5">6</div>
+                <img class="thumb" src="Images/img-5.png" alt="Haikyu" />
+                <div class="info">
+                  <div class="title" title="Haikyu">Haikyu</div>
+                  <p>Chapter 2190</p>
+                </div>
+              </a>
+            </section>
+
+            <!-- Column 2: New -->
+            <section class="column" aria-label="New Anime">
+              <h3 class="column-title">New</h3>
+
+              <a href="mangadetail.html" class="cart">
+                <div class="rank">1</div>
+                <img class="thumb" src="Images/anime-img-7.png" alt="86" />
+                <div class="info">
+                  <div class="title" title="86">86</div>
+                  <p>Chapter 1120</p>
+                </div>
+              </a>
+
+              <a href="mangadetail.html" class="cart">
+                <div class="rank" style="color: #a958a5">2</div>
+                <img
+                  class="thumb"
+                  src="Images/anime-img-5.png"
+                  alt="Chainsaw Man"
+                />
+                <div class="info">
+                  <div class="title" title="Chainsaw Man">Chainsaw Man</div>
+                  <p>Chapter 2300</p>
+                </div>
+              </a>
+
+              <a href="mangadetail.html" class="cart">
+                <div class="rank">3</div>
+                <img
+                  class="thumb"
+                  src="Images/img-2.png"
+                  alt="My Hero Academia"
+                />
+                <div class="info">
+                  <div class="title" title="My Hero Academia">
+                    My Hero Academia
+                  </div>
+                  <p>Chapter 4500</p>
+                </div>
+              </a>
+
+              <a href="mangadetail.html" class="cart">
+                <div class="rank" style="color: #a958a5">4</div>
+                <img
+                  class="thumb"
+                  src="Images/Jujutsu Kaisen wallpaper.jpeg"
+                  alt="Jujutsu Kaisen"
+                />
+                <div class="info">
+                  <div class="title" title="Jujutsu Kaisen">Jujutsu Kaisen</div>
+                  <p>Chapter 2500</p>
+                </div>
+              </a>
+
+              <a href="mangadetail.html" class="cart">
+                <div class="rank">5</div>
+                <img
+                  class="thumb"
+                  src="Images/Kny _Infinity castle_.jpeg"
+                  alt="Demon Slayer"
+                />
+                <div class="info">
+                  <div class="title" title="Demon Slayer">Demon Slayer</div>
+                  <p>Chapter 4800</p>
+                </div>
+              </a>
+
+              <a href="mangadetail.html" class="cart">
+                <div class="rank" style="color: #a958a5">6</div>
+                <img class="thumb" src="Images/img-6.png" alt="Psycho Pass" />
+                <div class="info">
+                  <div class="title" title="Psycho Pass">Psycho Pass</div>
+                  <p>Chapter 2800</p>
+                </div>
+              </a>
+            </section>
+
+            <!-- Column 3: Recently Completed -->
+            <section class="column" aria-label="Recently Completed">
+              <h3 class="column-title">Top Rated Manga</h3>
+
+              <a href="mangadetail.html" class="cart">
+                <div class="rank">1</div>
+                <img
+                  class="thumb"
+                  src="Images/anime-img-1.png"
+                  alt="Darling in the Franxx thumbnail"
+                />
+                <div class="info">
+                  <div class="title" title="Darling in the Franxx">
+                    Darling in the Franxx
+                  </div>
                   <p>Chapter 500</p>
                 </div>
-                <p class="anime-title">Summer Time</p>
-              </div>
-            </a>
-            <div class="menu">
-              <i class="fa-solid fa-list menu-icon"></i>
-              <div class="dropdown">
-                <a href="mangadetail.html"
-                  ><i class="fa-regular fa-clock"></i> Watch Later</a
-                >
-                <a href="mangadetail.html"
-                  ><i class="fa-solid fa-plus"></i> Add to Playlist</a
-                >
-              </div>
-            </div>
-          </div>
+              </a>
 
-          <!-- Repeat Cards -->
-          <div class="anime-card">
-            <a href="mangadetail.html" class="card-link">
-              <img src="Images/manga2.png" alt="Naruto" />
-              <div class="card-info">
-                <div class="tags">
-                  <p>Chapter 854</p>
-                </div>
-                <p class="anime-title">Naruto</p>
-              </div>
-            </a>
-            <div class="menu">
-              <i class="fa-solid fa-list menu-icon"></i>
-              <div class="dropdown">
-                <a href="mangadetail.html"
-                  ><i class="fa-regular fa-clock"></i> Watch Later</a
-                >
-                <a href="mangadetail.html"
-                  ><i class="fa-solid fa-plus"></i> Add to Playlist</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!--The rest of the anime-cards in the same format -->
-
-          <div class="anime-card">
-            <a href="mangadetail.html" class="card-link">
-              <img src="Images/manga3.png" alt="Spy X Family" />
-              <div class="card-info">
-                <div class="tags">
-                  <p>Chapter 90</p>
-                </div>
-                <p class="anime-title">Spy X Family</p>
-              </div>
-            </a>
-            <div class="menu">
-              <i class="fa-solid fa-list menu-icon"></i>
-              <div class="dropdown">
-                <a href="mangadetail.html"
-                  ><i class="fa-regular fa-clock"></i> Watch Later</a
-                >
-                <a href="mangadetail.html"
-                  ><i class="fa-solid fa-plus"></i> Add to Playlist</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="anime-card">
-            <a href="mangadetail.html" class="card-link">
-              <img src="Images/manga4.png" alt="Bleach" />
-              <div class="card-info">
-                <div class="tags">
-                  <p>Chapter 35</p>
-                </div>
-                <p class="anime-title">Bleach</p>
-              </div>
-            </a>
-            <div class="menu">
-              <i class="fa-solid fa-list menu-icon"></i>
-              <div class="dropdown">
-                <a href="mangadetail.html"
-                  ><i class="fa-regular fa-clock"></i> Watch Later</a
-                >
-                <a href="mangadetail.html"
-                  ><i class="fa-solid fa-plus"></i> Add to Playlist</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="anime-card">
-            <a href="mangadetail.html" class="card-link">
-              <img src="Images/manga5.png" alt="One Piece" />
-              <div class="card-info">
-                <div class="tags">
-                  <p>Chapter 17</p>
-                </div>
-                <p class="anime-title">One Piece</p>
-              </div>
-            </a>
-            <div class="menu">
-              <i class="fa-solid fa-list menu-icon"></i>
-              <div class="dropdown">
-                <a href="mangadetail.html"
-                  ><i class="fa-regular fa-clock"></i> Watch Later</a
-                >
-                <a href="mangadetail.html"
-                  ><i class="fa-solid fa-plus"></i> Add to Playlist</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="anime-card">
-            <a href="mangadetail.html" class="card-link">
-              <img src="Images/manga6.png" alt="My Hero Academia" />
-              <div class="card-info">
-                <div class="tags">
-                  <p>Chapter 350</p>
-                </div>
-                <p class="anime-title">My Hero Academia</p>
-              </div>
-            </a>
-            <div class="menu">
-              <i class="fa-solid fa-list menu-icon"></i>
-              <div class="dropdown">
-                <a href="mangadetail.html"
-                  ><i class="fa-regular fa-clock"></i> Watch Later</a
-                >
-                <a href="mangadetail.html"
-                  ><i class="fa-solid fa-plus"></i> Add to Playlist</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="anime-card">
-            <a href="mangadetail.html" class="card-link">
-              <img src="Images/manga7.png" alt="Dragon Ball Z Super" />
-              <div class="card-info">
-                <div class="tags">
-                  <p>Chapter 209</p>
-                </div>
-                <p class="anime-title">Dragon Ball Z Super</p>
-              </div>
-            </a>
-            <div class="menu">
-              <i class="fa-solid fa-list menu-icon"></i>
-              <div class="dropdown">
-                <a href="mangadetail.html"
-                  ><i class="fa-regular fa-clock"></i> Watch Later</a
-                >
-                <a href="mangadetail.html"
-                  ><i class="fa-solid fa-plus"></i> Add to Playlist</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="anime-card">
-            <a href="mangadetail.html" class="card-link">
-              <img src="Images/manga8.png" alt="Code Geas" />
-              <div class="card-info">
-                <div class="tags">
-                  <p>Chapter 179</p>
-                </div>
-                <p class="anime-title">Code Geas</p>
-              </div>
-            </a>
-            <div class="menu">
-              <i class="fa-solid fa-list menu-icon"></i>
-              <div class="dropdown">
-                <a href="mangadetail.html"
-                  ><i class="fa-regular fa-clock"></i> Watch Later</a
-                >
-                <a href="mangadetail.html"
-                  ><i class="fa-solid fa-plus"></i> Add to Playlist</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <section class="sub-header">
-      <div class="sub-header-text">
-        <h1 class="title">SPY X FAMILY</h1>
-        <ul class="tags">
-          <li><a href="mangadetail.html" class="active">PG-13</a></li>
-          <li><a href="mangadetail.html">DUB</a></li>
-          <li><a href="mangadetail.html">SUB</a></li>
-        </ul>
-        <p class="coming-soon">NEW CHAPTER COMING OUT</p>
-        <p class="countdown">
-          <span>00d</span><span>00h</span><span>00m</span><span>00s</span>
-        </p>
-      </div>
-    </section>
-
-    <section class="recently-uploaded-main">
-      <section class="recently-uploaded">
-        <div class="recently-uploaded-title">
-          <h4>RECENTLY UPLOADED</h4>
-          <!-- <p>SUNDAY 23 SEPT 2025</p> -->
-        </div>
-      </section>
-
-      <section>
-        <div class="anime-grid">
-          <!-- Example Card -->
-          <div class="anime-card">
-            <a href="mangadetail.html" class="card-link">
-              <img src="Images/manga9.png" alt="Kiznaiver" />
-              <div class="card-info">
-                <div class="tags">
-                  <p>Chapter 30</p>
-                </div>
-                <p class="anime-title">Kiznaiver</p>
-              </div>
-            </a>
-            <div class="menu">
-              <i class="fa-solid fa-list menu-icon"></i>
-              <div class="dropdown">
-                <a href="mangadetail.html"
-                  ><i class="fa-regular fa-clock"></i> Watch Later</a
-                >
-                <a href="mangadetail.html"
-                  ><i class="fa-solid fa-plus"></i> Add to Playlist</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Repeat -->
-          <div class="anime-card">
-            <a href="mangadetail.html" class="card-link">
-              <img src="Images/manga10.png" alt="Hunter X Hunter" />
-              <div class="card-info">
-                <div class="tags">
-                  <p>Chapter 240</p>
-                </div>
-                <p class="anime-title">Hunter X Hunter</p>
-              </div>
-            </a>
-            <div class="menu">
-              <i class="fa-solid fa-list menu-icon"></i>
-              <div class="dropdown">
-                <a href="mangadetail.html"
-                  ><i class="fa-regular fa-clock"></i> Watch Later</a
-                >
-                <a href="mangadetail.html"
-                  ><i class="fa-solid fa-plus"></i> Add to Playlist</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!--The rest of the anime-cards in the same format -->
-
-          <div class="anime-card">
-            <a href="mangadetail.html" class="card-link">
-              <img src="Images/manga11.png" alt="Full Metal Alchemist" />
-              <div class="card-info">
-                <div class="tags">
-                  <p>Chapter 21</p>
-                </div>
-                <p class="anime-title">Full Metal Alchemist</p>
-              </div>
-            </a>
-            <div class="menu">
-              <i class="fa-solid fa-list menu-icon"></i>
-              <div class="dropdown">
-                <a href="mangadetail.html"
-                  ><i class="fa-regular fa-clock"></i> Watch Later</a
-                >
-                <a href="mangadetail.html"
-                  ><i class="fa-solid fa-plus"></i> Add to Playlist</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="anime-card">
-            <a href="mangadetail.html" class="card-link">
-              <img src="Images/manga12.png" alt="Solo Leveling" />
-              <div class="card-info">
-                <div class="tags">
+              <a href="mangadetail.html" class="cart">
+                <div class="rank" style="color: #a958a5">2</div>
+                <img
+                  class="thumb"
+                  src="Images/SOLO LEVELING WALLPAPER.jpeg"
+                  alt="Solo Leveling"
+                />
+                <div class="info">
+                  <div class="title" title="Solo Leveling">Solo Leveling</div>
                   <p>Chapter 1009</p>
                 </div>
-                <p class="anime-title">Solo Leveling</p>
-              </div>
-            </a>
-            <div class="menu">
-              <i class="fa-solid fa-list menu-icon"></i>
-              <div class="dropdown">
-                <a href="mangadetail.html"
-                  ><i class="fa-regular fa-clock"></i> Watch Later</a
-                >
-                <a href="mangadetail.html"
-                  ><i class="fa-solid fa-plus"></i> Add to Playlist</a
-                >
-              </div>
-            </div>
+              </a>
+
+              <a href="mangadetail.html" class="cart">
+                <div class="rank">3</div>
+                <img
+                  class="thumb"
+                  src="Images/7d4501fa-a817-49a2-994a-d886d906914e.jpeg"
+                  alt="Darling in the Franxx thumbnail"
+                />
+                <div class="info">
+                  <div class="title" title="One Punch Man">One Punch Man</div>
+                  <p>Chapter 2500</p>
+                </div>
+              </a>
+
+              <a href="mangadetail.html" class="cart">
+                <div class="rank" style="color: #a958a5">4</div>
+                <img
+                  class="thumb"
+                  src="Images/One-piece.jpeg"
+                  alt="One Piece thumbnail"
+                />
+                <div class="info">
+                  <div class="title" title="One Piece">One Piece</div>
+                  <p>Chapter 1016</p>
+                </div>
+              </a>
+
+              <a href="mangadetail.html" class="cart">
+                <div class="rank">5</div>
+                <img
+                  class="thumb"
+                  src="Images/img-21.png"
+                  alt="Black Bullet thumbnail"
+                />
+                <div class="info">
+                  <div class="title" title="Black Bullet">Black Bullet</div>
+                  <p>Chapter 1020</p>
+                </div>
+              </a>
+
+              <a href="mangadetail.html" class="cart">
+                <div class="rank" style="color: #a958a5">6</div>
+                <img
+                  class="thumb"
+                  src="Images/img-22.png"
+                  alt="Kiznaiver thumbnail"
+                />
+                <div class="info">
+                  <div class="title" title="Kiznaiver">Kiznaiver</div>
+                  <p>Chapter 2200</p>
+                </div>
+              </a>
+            </section>
           </div>
         </div>
       </section>
-    </section>
 
-    <section class="weekly-schedule">
-      <div class="schedule-title">
-        <h4>WEEKLY SCHEDULE</h4>
-      </div>
-      <div class="schedule">
-        <!-- Days Navigation -->
-        <div class="days-nav">
-          <button class="nav-btn">&lt;</button>
-
-          <div class="days">
-            <div class="day active">
-              <span class="date">JAN 1</span>
-              <span class="weekday">SUN</span>
-            </div>
-            <div class="day">
-              <span class="date">JAN 2</span><span class="weekday">MON</span>
-            </div>
-            <div class="day">
-              <span class="date">JAN 3</span><span class="weekday">TUE</span>
-            </div>
-            <div class="day">
-              <span class="date">JAN 4</span><span class="weekday">WED</span>
-            </div>
-            <div class="day">
-              <span class="date">JAN 5</span><span class="weekday">THU</span>
-            </div>
-            <div class="day">
-              <span class="date">JAN 6</span><span class="weekday">FRI</span>
-            </div>
-            <div class="day">
-              <span class="date">JAN 7</span><span class="weekday">SAT</span>
-            </div>
-            <div class="day">
-              <span class="date">JAN 8</span><span class="weekday">SUN</span>
-            </div>
-            <div class="day">
-              <span class="date">JAN 9</span><span class="weekday">MON</span>
-            </div>
-            <div class="day">
-              <span class="date">JAN 10</span><span class="weekday">TUE</span>
-            </div>
-            <div class="day">
-              <span class="date">JAN 11</span><span class="weekday">WED</span>
-            </div>
-            <div class="day">
-              <span class="date">JAN 12</span><span class="weekday">THU</span>
-            </div>
-            <div class="day">
-              <span class="date">JAN 13</span><span class="weekday">FRI</span>
-            </div>
-            <div class="day">
-              <span class="date">JAN 14</span><span class="weekday">SAT</span>
-            </div>
-            <div class="day">
-              <span class="date">JAN 15</span><span class="weekday">SUN</span>
-            </div>
-            <div class="day">
-              <span class="date">JAN 16</span><span class="weekday">MON</span>
-            </div>
-          </div>
-          <button class="nav-btn">&gt;</button>
+      <section class="blog">
+        <div class="blog-header">
+          <h4>BLOGS</h4>
         </div>
 
-        <!-- Countdown -->
-        <div class="countdown">
-          <div>
-            <p>Anime Title</p>
-          </div>
-          <div class="countdown-timer">
-            <span>00d</span>
-            <span>00h</span>
-            <span>00m</span>
-            <span>00s</span>
-          </div>
-          <div>
-            <p>Episode</p>
-          </div>
-        </div>
-
-        <!-- Anime List -->
-        <div class="anime-list">
-          <a href="mangadetail.html"
-            ><div class="anime-item">
-              <span class="time">12:00</span>
-              <img src="Images/anime-img-1.png" alt="Darling in the Franxx" />
-              <div class="details">
-                <h3>Darling in the Franxx!</h3>
-                <div class="tags">
-                  <span class="tag">DUB 8</span>
-                  <span class="tag">SUB 12</span>
-                </div>
-              </div>
-
-              <div class="episode-info">
-                <span>TV</span>
-                <span class="episode">Episode 04</span>
-              </div>
-            </div></a
-          >
-
-          <a href="mangadetail.html"
-            ><div class="anime-item">
-              <span class="time">14:00</span>
-              <img src="Images/anime-img-2.png" alt="Plastic Memories" />
-              <div class="details">
-                <h3>Plastic Memories</h3>
-                <div class="tags">
-                  <span class="tag">DUB 8</span>
-                  <span class="tag">SUB 12</span>
-                </div>
-              </div>
-              <div class="episode-info">
-                <span>TV</span>
-                <span class="episode">Episode 06</span>
-              </div>
-            </div></a
-          >
-
-          <a href="mangadetail.html"
-            ><div class="anime-item">
-              <span class="time">14:00</span>
-              <img src="Images/anime-img-7.png" alt="86" />
-              <div class="details">
-                <h3>86</h3>
-                <div class="tags">
-                  <span class="tag">DUB 8</span>
-                  <span class="tag">SUB 12</span>
-                </div>
-              </div>
-              <div class="episode-info">
-                <span>TV</span>
-                <span class="episode">Episode 06</span>
-              </div>
-            </div></a
-          >
-
-          <a href="mangadetail.html"
-            ><div class="anime-item">
-              <span class="time">14:00</span>
+        <div class="blog-cards">
+          <a href="blogdetail.html" class="blog-card">
+            <div class="blog-img-container">
               <img
-                src="Images/anime-img-3.png"
-                alt="That Time I Got Reincarnated as a Slime"
+                class="blog-img"
+                src="Images/dex-ezekiel-IxDPZ-AHfoI-unsplash.jpg"
+                alt="Blog Image"
               />
-              <div class="details">
-                <h3>That Time I Got Reincarnated as a Slime</h3>
-                <div class="tags">
-                  <span class="tag">DUB 8</span>
-                  <span class="tag">SUB 12</span>
-                </div>
-              </div>
-              <div class="episode-info">
-                <span>TV</span>
-                <span class="episode">Episode 06</span>
-              </div>
-            </div></a
-          >
+            </div>
+            <div class="blog-date">
+              <p>28 NOV 2024</p>
+              <p>Review</p>
+            </div>
+            <h3 class="blog-title">TOP ANIME TO WATCH</h3>
+            <div class="blog-author">
+              <img src="Images/comment-img-2.png" alt="Author" />
+              <p>Author: Rashik</p>
+            </div>
+          </a>
 
-          <a href="mangadetail.html"
-            ><div class="anime-item">
-              <span class="time">14:00</span>
-              <img src="Images/anime-img-4.png" alt="Assassination Classroom" />
-              <div class="details">
-                <h3>Assassination Classroom</h3>
-                <div class="tags">
-                  <span class="tag">DUB 8</span>
-                  <span class="tag">SUB 12</span>
-                </div>
-              </div>
-              <div class="episode-info">
-                <span>TV</span>
-                <span class="episode">Episode 06</span>
-              </div>
-            </div></a
-          >
+          <a href="blogdetail-2.html" class="blog-card">
+            <div class="blog-img-container">
+              <img class="blog-img" src="Images/manga7.png" alt="Blog Image" />
+            </div>
+            <div class="blog-date">
+              <p>23 SEPT 2025</p>
+              <p>Manga</p>
+            </div>
+            <h3 class="blog-title">MAGICAL WORLD REVEALED</h3>
+            <div class="blog-author">
+              <img src="Images/comment-img-3.png" alt="Author" />
+              <p>Author: Jake</p>
+            </div>
+          </a>
 
-          <div class="anime-item">
-            <span class="time">23:00</span>
-            <img src="Images/anime-img-5.png" alt="Chainsaw Man" />
-            <div class="details">
-              <h3>Chainsaw Man</h3>
-              <div class="tags">
-                <span class="tag">DUB 8</span>
-                <span class="tag">SUB 12</span>
+          <a href="blog.html" class="blog-card">
+            <div class="blog-img-container">
+              <img
+                class="blog-img"
+                src="Images/blog-img-5.png"
+                alt="Blog Image"
+              />
+            </div>
+            <div class="blog-date">
+              <p>15 DEC 2023</p>
+              <p>Anime</p>
+            </div>
+            <h3 class="blog-title">BATTLE OF HEROES!</h3>
+            <div class="blog-author">
+              <img src="Images/comment-img-4.png" alt="Author" />
+              <p>Author: Rashik</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-content">
+          <!-- Left section -->
+          <div class="footer-left">
+            <a href="index.html" class="footer-logo"
+              ><img src="Images/logo.png" alt="AnimeLoop Logo"
+            /></a>
+            <p class="footer-desc">
+              AnimeLoop is your go-to platform for streaming, discovering, and
+              discussing the latest and greatest anime series and movies. Join
+              our community to stay updated, share your favorites, and connect
+              with fellow fans!
+            </p>
+
+            <div class="footer-social">
+              <h3>JOIN US ON</h3>
+              <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-reddit"></i></a>
+                <a href="#"><i class="fa-brands fa-discord"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
               </div>
             </div>
-            <div class="episode-info">
-              <span>TV</span>
-              <span class="episode">Episode 12</span>
-            </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <section class="grid-section" aria-label="Anime lists">
-      <div class="container">
-        <div class="columns" aria-label="Anime lists">
-          <!-- Column 1: Top Rated -->
-          <section class="column" aria-label="Top Rated Anime">
-            <h3 class="column-title">Recently Completed</h3>
-
-            <a href="mangadetail.html" class="cart">
-              <div class="rank">1</div>
-              <img
-                class="thumb"
-                src="Images/3fcc3b1b-38c4-493c-baaa-cae66700dbfe.jpeg"
-                alt="Darling in the Franxx thumbnail"
-              />
-              <div class="info">
-                <div class="title" title="Solo Leveling">Black Clover</div>
-                <p>Chapter 8190</p>
-              </div>
-            </a>
-
-            <a href="mangadetail.html" class="cart">
-              <div class="rank" style="color: #a958a5">2</div>
-              <img
-                class="thumb"
-                src="Images/MHA Season 5 Key Art 5.jpeg"
-                alt="Darling in the Franxx thumbnail"
-              />
-              <div class="info">
-                <div class="title" title="y Hero Academia">
-                  My Hero Academia
-                </div>
-                <p>Chapter 4500</p>
-              </div>
-            </a>
-
-            <a href="mangadetail.html" class="cart">
-              <div class="rank">3</div>
-              <img
-                class="thumb"
-                src="Images/Vinland Saga_Poster.jpeg"
-                alt="Vinland Saga"
-              />
-              <div class="info">
-                <div class="title" title="Vinland Saga">Vinland Saga</div>
-                <p>Chapter 3000</p>
-              </div>
-            </a>
-
-            <a href="mangadetail.html" class="cart">
-              <div class="rank" style="color: #a958a5">4</div>
-              <img
-                class="thumb"
-                src="Images/a9b4ee8e-0f83-4e81-886a-4e406c0cceb4.jpeg"
-                alt="Bleach"
-              />
-              <div class="info">
-                <div class="title" title="Bleach">Bleach</div>
-                <p>Chapter 8090</p>
-              </div>
-            </a>
-
-            <a href="mangadetail.html" class="cart">
-              <div class="rank">5</div>
-              <img
-                class="thumb"
-                src="Images/Naruto HD Wallpaper 💙.jpeg"
-                alt="Naruto"
-              />
-              <div class="info">
-                <div class="title" title="Naruto">Naruto</div>
-                <p>Chapter 7850</p>
-              </div>
-            </a>
-
-            <a href="mangadetail.html" class="cart">
-              <div class="rank" style="color: #a958a5">6</div>
-              <img class="thumb" src="Images/img-5.png" alt="Haikyu" />
-              <div class="info">
-                <div class="title" title="Haikyu">Haikyu</div>
-                <p>Chapter 2190</p>
-              </div>
-            </a>
-          </section>
-
-          <!-- Column 2: New -->
-          <section class="column" aria-label="New Anime">
-            <h3 class="column-title">New</h3>
-
-            <a href="mangadetail.html" class="cart">
-              <div class="rank">1</div>
-              <img class="thumb" src="Images/anime-img-7.png" alt="86" />
-              <div class="info">
-                <div class="title" title="86">86</div>
-                <p>Chapter 1120</p>
-              </div>
-            </a>
-
-            <a href="mangadetail.html" class="cart">
-              <div class="rank" style="color: #a958a5">2</div>
-              <img
-                class="thumb"
-                src="Images/anime-img-5.png"
-                alt="Chainsaw Man"
-              />
-              <div class="info">
-                <div class="title" title="Chainsaw Man">Chainsaw Man</div>
-                <p>Chapter 2300</p>
-              </div>
-            </a>
-
-            <a href="mangadetail.html" class="cart">
-              <div class="rank">3</div>
-              <img
-                class="thumb"
-                src="Images/img-2.png"
-                alt="My Hero Academia"
-              />
-              <div class="info">
-                <div class="title" title="My Hero Academia">
-                  My Hero Academia
-                </div>
-                <p>Chapter 4500</p>
-              </div>
-            </a>
-
-            <a href="mangadetail.html" class="cart">
-              <div class="rank" style="color: #a958a5">4</div>
-              <img
-                class="thumb"
-                src="Images/Jujutsu Kaisen wallpaper.jpeg"
-                alt="Jujutsu Kaisen"
-              />
-              <div class="info">
-                <div class="title" title="Jujutsu Kaisen">Jujutsu Kaisen</div>
-                <p>Chapter 2500</p>
-              </div>
-            </a>
-
-            <a href="mangadetail.html" class="cart">
-              <div class="rank">5</div>
-              <img
-                class="thumb"
-                src="Images/Kny _Infinity castle_.jpeg"
-                alt="Demon Slayer"
-              />
-              <div class="info">
-                <div class="title" title="Demon Slayer">Demon Slayer</div>
-                <p>Chapter 4800</p>
-              </div>
-            </a>
-
-            <a href="mangadetail.html" class="cart">
-              <div class="rank" style="color: #a958a5">6</div>
-              <img class="thumb" src="Images/img-6.png" alt="Psycho Pass" />
-              <div class="info">
-                <div class="title" title="Psycho Pass">Psycho Pass</div>
-                <p>Chapter 2800</p>
-              </div>
-            </a>
-          </section>
-
-          <!-- Column 3: Recently Completed -->
-          <section class="column" aria-label="Recently Completed">
-            <h3 class="column-title">Top Rated Manga</h3>
-
-            <a href="mangadetail.html" class="cart">
-              <div class="rank">1</div>
-              <img
-                class="thumb"
-                src="Images/anime-img-1.png"
-                alt="Darling in the Franxx thumbnail"
-              />
-              <div class="info">
-                <div class="title" title="Darling in the Franxx">
-                  Darling in the Franxx
-                </div>
-                <p>Chapter 500</p>
-              </div>
-            </a>
-
-            <a href="mangadetail.html" class="cart">
-              <div class="rank" style="color: #a958a5">2</div>
-              <img
-                class="thumb"
-                src="Images/SOLO LEVELING WALLPAPER.jpeg"
-                alt="Solo Leveling"
-              />
-              <div class="info">
-                <div class="title" title="Solo Leveling">Solo Leveling</div>
-                <p>Chapter 1009</p>
-              </div>
-            </a>
-
-            <a href="mangadetail.html" class="cart">
-              <div class="rank">3</div>
-              <img
-                class="thumb"
-                src="Images/7d4501fa-a817-49a2-994a-d886d906914e.jpeg"
-                alt="Darling in the Franxx thumbnail"
-              />
-              <div class="info">
-                <div class="title" title="One Punch Man">One Punch Man</div>
-                <p>Chapter 2500</p>
-              </div>
-            </a>
-
-            <a href="mangadetail.html" class="cart">
-              <div class="rank" style="color: #a958a5">4</div>
-              <img
-                class="thumb"
-                src="Images/One-piece.jpeg"
-                alt="One Piece thumbnail"
-              />
-              <div class="info">
-                <div class="title" title="One Piece">One Piece</div>
-                <p>Chapter 1016</p>
-              </div>
-            </a>
-
-            <a href="mangadetail.html" class="cart">
-              <div class="rank">5</div>
-              <img
-                class="thumb"
-                src="Images/img-21.png"
-                alt="Black Bullet thumbnail"
-              />
-              <div class="info">
-                <div class="title" title="Black Bullet">Black Bullet</div>
-                <p>Chapter 1020</p>
-              </div>
-            </a>
-
-            <a href="mangadetail.html" class="cart">
-              <div class="rank" style="color: #a958a5">6</div>
-              <img
-                class="thumb"
-                src="Images/img-22.png"
-                alt="Kiznaiver thumbnail"
-              />
-              <div class="info">
-                <div class="title" title="Kiznaiver">Kiznaiver</div>
-                <p>Chapter 2200</p>
-              </div>
-            </a>
-          </section>
-        </div>
-      </div>
-    </section>
-
-    <section class="blog">
-      <div class="blog-header">
-        <h4>BLOGS</h4>
-      </div>
-
-      <div class="blog-cards">
-        <a href="blogdetail.html" class="blog-card">
-          <div class="blog-img-container">
-            <img
-              class="blog-img"
-              src="Images/dex-ezekiel-IxDPZ-AHfoI-unsplash.jpg"
-              alt="Blog Image"
-            />
-          </div>
-          <div class="blog-date">
-            <p>28 NOV 2024</p>
-            <p>Review</p>
-          </div>
-          <h3 class="blog-title">TOP ANIME TO WATCH</h3>
-          <div class="blog-author">
-            <img src="Images/comment-img-2.png" alt="Author" />
-            <p>Author: Rashik</p>
-          </div>
-        </a>
-
-        <a href="blogdetail-2.html" class="blog-card">
-          <div class="blog-img-container">
-            <img class="blog-img" src="Images/manga7.png" alt="Blog Image" />
-          </div>
-          <div class="blog-date">
-            <p>23 SEPT 2025</p>
-            <p>Manga</p>
-          </div>
-          <h3 class="blog-title">MAGICAL WORLD REVEALED</h3>
-          <div class="blog-author">
-            <img src="Images/comment-img-3.png" alt="Author" />
-            <p>Author: Jake</p>
-          </div>
-        </a>
-
-        <a href="blog.html" class="blog-card">
-          <div class="blog-img-container">
-            <img
-              class="blog-img"
-              src="Images/blog-img-5.png"
-              alt="Blog Image"
-            />
-          </div>
-          <div class="blog-date">
-            <p>15 DEC 2023</p>
-            <p>Anime</p>
-          </div>
-          <h3 class="blog-title">BATTLE OF HEROES!</h3>
-          <div class="blog-author">
-            <img src="Images/comment-img-4.png" alt="Author" />
-            <p>Author: Rashik</p>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="footer-content">
-        <!-- Left section -->
-        <div class="footer-left">
-          <a href="index.html" class="footer-logo"
-            ><img src="Images/logo.png" alt="AnimeLoop Logo"
-          /></a>
-          <p class="footer-desc">
-            AnimeLoop is your go-to platform for streaming, discovering, and
-            discussing the latest and greatest anime series and movies. Join our
-            community to stay updated, share your favorites, and connect with
-            fellow fans!
-          </p>
-
-          <div class="footer-social">
-            <h3>JOIN US ON</h3>
-            <div class="social-icons">
-              <a href="#"><i class="fa-brands fa-reddit"></i></a>
-              <a href="#"><i class="fa-brands fa-discord"></i></a>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-            </div>
+          <!-- Right section -->
+          <div class="footer-right">
+            <h3>GET NOTIFIED</h3>
+            <p>Get emails for latest news about anime, and more.</p>
+            <form class="subscribe-form">
+              <input type="email" placeholder="info@example.com" required />
+              <button type="submit">Subscribe</button>
+            </form>
+            <p class="terms">
+              By subscribing you agree to our
+              <a href="#">terms and conditions</a>
+            </p>
           </div>
         </div>
 
-        <!-- Right section -->
-        <div class="footer-right">
-          <h3>GET NOTIFIED</h3>
-          <p>Get emails for latest news about anime, and more.</p>
-          <form class="subscribe-form">
-            <input type="email" placeholder="info@example.com" required />
-            <button type="submit">Subscribe</button>
-          </form>
-          <p class="terms">
-            By subscribing you agree to our <a href="#">terms and conditions</a>
-          </p>
+        <!-- Bottom bar -->
+        <div class="footer-bottom">
+          <p>© 2025 All rights reserved by Valentine.</p>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Comments Policy</a>
+          </div>
         </div>
-      </div>
+      </footer>
 
-      <!-- Bottom bar -->
-      <div class="footer-bottom">
-        <p>© 2025 All rights reserved by Valentine.</p>
-        <div class="footer-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Comments Policy</a>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" title="Go to top">
-      <i class="fa-solid fa-angles-up"></i>
-    </button>
+      <!-- Back to Top Button -->
+      <button id="backToTop" title="Go to top">
+        <i class="fa-solid fa-angles-up"></i>
+      </button>
+    </div>
 
     <script src="manga.js"></script>
   </body>

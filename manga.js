@@ -1,3 +1,12 @@
+// Simulate loading time
+window.addEventListener("load", function () {
+  const loader = document.getElementById("loader");
+  const content = document.getElementById("content");
+
+  loader.style.display = "none"; // hide loader
+  content.style.display = "block"; // show content
+});
+
 // Hamburger
 const hamburger = document.getElementById("hamburger");
 const menu = document.getElementById("menu");

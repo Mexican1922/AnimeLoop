@@ -23,208 +23,216 @@
     />
   </head>
   <body>
-    <nav class="navbar">
-      <div class="logo">
-        <a href="index.html"
-          ><img src="Images/logo.png" alt="Anime Loop Logo"
-        /></a>
-      </div>
+    <!-- Loading Screen -->
+    <div id="loader">
+      <div class="spinner"></div>
+      <img src="Images/Anime-loop-preloader-white.gif" alt="Loading Image" />
+    </div>
 
-      <!-- Hamburger -->
-      <div class="menu-toggle">
-        <i class="fa-solid fa-bars"></i>
-      </div>
-
-      <!-- Collapsible Menu -->
-      <div class="menu-items">
-        <div class="nav-links">
-          <ul>
-            <li><a href="index.html" class="home">Home</a></li>
-            <li><a href="blog.html" class="movie">Blog</a></li>
-            <li><a href="manga.html" class="manga">Manga</a></li>
-            <li><a href="#" class="pages">Pages</a></li>
-          </ul>
+    <!-- Main Content -->
+    <div id="content" style="display: none">
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="Images/logo.png" alt="Anime Loop Logo"
+          /></a>
         </div>
 
-        <!-- Search + Auth inside menu -->
-        <div class="search-auth">
-          <form action="search.html">
-            <span><i class="fa-solid fa-magnifying-glass"></i></span>
-            <input type="text" name="q" placeholder="Search" />
-          </form>
-
-          <ul>
-            <li><a href="sign.html" class="sign-up">SIGN UP</a></li>
-            <li><a href="log.html" class="log-in">LOG IN</a></li>
-          </ul>
+        <!-- Hamburger -->
+        <div class="menu-toggle">
+          <i class="fa-solid fa-bars"></i>
         </div>
-      </div>
-    </nav>
 
-    <main>
-      <div class="blog-top">
-        <p>
-          <a href="index.html">Anime</a>&ensp;&ensp; /
-          <span class="active">&ensp;&ensp; List</span>
-        </p>
-      </div>
+        <!-- Collapsible Menu -->
+        <div class="menu-items">
+          <div class="nav-links">
+            <ul>
+              <li><a href="index.html" class="home">Home</a></li>
+              <li><a href="blog.html" class="movie">Blog</a></li>
+              <li><a href="manga.html" class="manga">Manga</a></li>
+              <li><a href="#" class="pages">Pages</a></li>
+            </ul>
+          </div>
 
-      <section class="filter-section">
-        <div class="filter-header">
-          <h2>FILTER</h2>
+          <!-- Search + Auth inside menu -->
+          <div class="search-auth">
+            <form action="search.html">
+              <span><i class="fa-solid fa-magnifying-glass"></i></span>
+              <input type="text" name="q" placeholder="Search" />
+            </form>
+
+            <ul>
+              <li><a href="sign.html" class="sign-up">SIGN UP</a></li>
+              <li><a href="log.html" class="log-in">LOG IN</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <main>
+        <div class="blog-top">
           <p>
-            <i class="fa-solid fa-border-all box-all"></i>
-            <i class="fa-solid fa-list box-list"></i> SHOWING 1 – 09 OF 5000
-            ANIME
+            <a href="index.html">Anime</a>&ensp;&ensp; /
+            <span class="active">&ensp;&ensp; List</span>
           </p>
         </div>
 
-        <!-- Alphabet Filter -->
-        <div class="alphabet-filter">
-          <button class="active">All</button>
-          <button>0-1</button>
-          <button>A</button>
-          <button>B</button>
-          <button>C</button>
-          <button>D</button>
-          <button>E</button>
-          <button>F</button>
-          <button>G</button>
-          <button>H</button>
-          <button>I</button>
-          <button>J</button>
-          <button>L</button>
-          <button>M</button>
-          <button>N</button>
-          <button>O</button>
-          <button>P</button>
-          <button>Q</button>
-          <button>R</button>
-          <button>S</button>
-          <button>T</button>
-          <button>U</button>
-          <button>V</button>
-          <button>W</button>
-          <button>X</button>
-          <button>Y</button>
-          <button>Z</button>
-        </div>
+        <section class="filter-section">
+          <div class="filter-header">
+            <h2>FILTER</h2>
+            <p>
+              <i class="fa-solid fa-border-all box-all"></i>
+              <i class="fa-solid fa-list box-list"></i> SHOWING 1 – 09 OF 5000
+              ANIME
+            </p>
+          </div>
 
-        <!-- Dropdown Filters -->
-        <div class="dropdown-filters">
-          <!-- Genre -->
-          <div class="dropdown">
-            <button class="drop-btn">Genre ▾</button>
-            <div class="dropdown-content">
-              <label><input type="checkbox" /> Action</label>
-              <label><input type="checkbox" /> Adventure</label>
-              <label><input type="checkbox" /> Comedy</label>
-              <label><input type="checkbox" /> Drama</label>
-              <label><input type="checkbox" /> Fantasy</label>
-              <label><input type="checkbox" /> Horror</label>
-              <label><input type="checkbox" /> Romance</label>
-              <label><input type="checkbox" /> Sci-Fi</label>
-              <label><input type="checkbox" /> Thriller</label>
+          <!-- Alphabet Filter -->
+          <div class="alphabet-filter">
+            <button class="active">All</button>
+            <button>0-1</button>
+            <button>A</button>
+            <button>B</button>
+            <button>C</button>
+            <button>D</button>
+            <button>E</button>
+            <button>F</button>
+            <button>G</button>
+            <button>H</button>
+            <button>I</button>
+            <button>J</button>
+            <button>L</button>
+            <button>M</button>
+            <button>N</button>
+            <button>O</button>
+            <button>P</button>
+            <button>Q</button>
+            <button>R</button>
+            <button>S</button>
+            <button>T</button>
+            <button>U</button>
+            <button>V</button>
+            <button>W</button>
+            <button>X</button>
+            <button>Y</button>
+            <button>Z</button>
+          </div>
+
+          <!-- Dropdown Filters -->
+          <div class="dropdown-filters">
+            <!-- Genre -->
+            <div class="dropdown">
+              <button class="drop-btn">Genre ▾</button>
+              <div class="dropdown-content">
+                <label><input type="checkbox" /> Action</label>
+                <label><input type="checkbox" /> Adventure</label>
+                <label><input type="checkbox" /> Comedy</label>
+                <label><input type="checkbox" /> Drama</label>
+                <label><input type="checkbox" /> Fantasy</label>
+                <label><input type="checkbox" /> Horror</label>
+                <label><input type="checkbox" /> Romance</label>
+                <label><input type="checkbox" /> Sci-Fi</label>
+                <label><input type="checkbox" /> Thriller</label>
+              </div>
+            </div>
+
+            <!-- Country -->
+            <div class="dropdown">
+              <button class="drop-btn">Country ▾</button>
+              <div class="dropdown-content">
+                <label><input type="checkbox" /> Japan</label>
+                <label><input type="checkbox" /> Korea</label>
+                <label><input type="checkbox" /> China</label>
+                <label><input type="checkbox" /> USA</label>
+                <label><input type="checkbox" /> UK</label>
+              </div>
+            </div>
+
+            <!-- Season -->
+            <div class="dropdown">
+              <button class="drop-btn">Season ▾</button>
+              <div class="dropdown-content">
+                <label><input type="checkbox" /> Winter</label>
+                <label><input type="checkbox" /> Spring</label>
+                <label><input type="checkbox" /> Summer</label>
+                <label><input type="checkbox" /> Fall</label>
+              </div>
+            </div>
+
+            <!-- Year -->
+            <div class="dropdown">
+              <button class="drop-btn">Year ▾</button>
+              <div class="dropdown-content">
+                <label><input type="checkbox" /> 2025</label>
+                <label><input type="checkbox" /> 2024</label>
+                <label><input type="checkbox" /> 2023</label>
+                <label><input type="checkbox" /> 2022</label>
+                <label><input type="checkbox" /> 2021</label>
+              </div>
+            </div>
+
+            <!-- Type -->
+            <div class="dropdown">
+              <button class="drop-btn">Type ▾</button>
+              <div class="dropdown-content">
+                <label><input type="checkbox" /> TV</label>
+                <label><input type="checkbox" /> Movie</label>
+                <label><input type="checkbox" /> OVA</label>
+                <label><input type="checkbox" /> ONA</label>
+                <label><input type="checkbox" /> Special</label>
+              </div>
+            </div>
+
+            <!-- Status -->
+            <div class="dropdown">
+              <button class="drop-btn">Status ▾</button>
+              <div class="dropdown-content">
+                <label><input type="checkbox" /> Airing</label>
+                <label><input type="checkbox" /> Completed</label>
+                <label><input type="checkbox" /> Upcoming</label>
+              </div>
+            </div>
+
+            <!-- Language -->
+            <div class="dropdown">
+              <button class="drop-btn">Language ▾</button>
+              <div class="dropdown-content">
+                <label><input type="checkbox" /> Japanese</label>
+                <label><input type="checkbox" /> English</label>
+                <label><input type="checkbox" /> Chinese</label>
+                <label><input type="checkbox" /> Korean</label>
+              </div>
+            </div>
+
+            <!-- Rating -->
+            <div class="dropdown">
+              <button class="drop-btn">Rating ▾</button>
+              <div class="dropdown-content">
+                <label><input type="checkbox" /> G - All Ages</label>
+                <label><input type="checkbox" /> PG - Children</label>
+                <label><input type="checkbox" /> PG-13 - Teens</label>
+                <label><input type="checkbox" /> R - 17+</label>
+              </div>
+            </div>
+
+            <!-- Sort By -->
+            <div class="dropdown">
+              <button class="drop-btn">Sort By ▾</button>
+              <div class="dropdown-content">
+                <label><input type="checkbox" /> Popularity</label>
+                <label><input type="checkbox" /> Latest</label>
+                <label><input type="checkbox" /> Oldest</label>
+                <label><input type="checkbox" /> A-Z</label>
+                <label><input type="checkbox" /> Z-A</label>
+                <label><input type="checkbox" /> Highest Rated</label>
+              </div>
             </div>
           </div>
 
-          <!-- Country -->
-          <div class="dropdown">
-            <button class="drop-btn">Country ▾</button>
-            <div class="dropdown-content">
-              <label><input type="checkbox" /> Japan</label>
-              <label><input type="checkbox" /> Korea</label>
-              <label><input type="checkbox" /> China</label>
-              <label><input type="checkbox" /> USA</label>
-              <label><input type="checkbox" /> UK</label>
-            </div>
-          </div>
+          <button class="filter-btn">Filter Now</button>
 
-          <!-- Season -->
-          <div class="dropdown">
-            <button class="drop-btn">Season ▾</button>
-            <div class="dropdown-content">
-              <label><input type="checkbox" /> Winter</label>
-              <label><input type="checkbox" /> Spring</label>
-              <label><input type="checkbox" /> Summer</label>
-              <label><input type="checkbox" /> Fall</label>
-            </div>
-          </div>
-
-          <!-- Year -->
-          <div class="dropdown">
-            <button class="drop-btn">Year ▾</button>
-            <div class="dropdown-content">
-              <label><input type="checkbox" /> 2025</label>
-              <label><input type="checkbox" /> 2024</label>
-              <label><input type="checkbox" /> 2023</label>
-              <label><input type="checkbox" /> 2022</label>
-              <label><input type="checkbox" /> 2021</label>
-            </div>
-          </div>
-
-          <!-- Type -->
-          <div class="dropdown">
-            <button class="drop-btn">Type ▾</button>
-            <div class="dropdown-content">
-              <label><input type="checkbox" /> TV</label>
-              <label><input type="checkbox" /> Movie</label>
-              <label><input type="checkbox" /> OVA</label>
-              <label><input type="checkbox" /> ONA</label>
-              <label><input type="checkbox" /> Special</label>
-            </div>
-          </div>
-
-          <!-- Status -->
-          <div class="dropdown">
-            <button class="drop-btn">Status ▾</button>
-            <div class="dropdown-content">
-              <label><input type="checkbox" /> Airing</label>
-              <label><input type="checkbox" /> Completed</label>
-              <label><input type="checkbox" /> Upcoming</label>
-            </div>
-          </div>
-
-          <!-- Language -->
-          <div class="dropdown">
-            <button class="drop-btn">Language ▾</button>
-            <div class="dropdown-content">
-              <label><input type="checkbox" /> Japanese</label>
-              <label><input type="checkbox" /> English</label>
-              <label><input type="checkbox" /> Chinese</label>
-              <label><input type="checkbox" /> Korean</label>
-            </div>
-          </div>
-
-          <!-- Rating -->
-          <div class="dropdown">
-            <button class="drop-btn">Rating ▾</button>
-            <div class="dropdown-content">
-              <label><input type="checkbox" /> G - All Ages</label>
-              <label><input type="checkbox" /> PG - Children</label>
-              <label><input type="checkbox" /> PG-13 - Teens</label>
-              <label><input type="checkbox" /> R - 17+</label>
-            </div>
-          </div>
-
-          <!-- Sort By -->
-          <div class="dropdown">
-            <button class="drop-btn">Sort By ▾</button>
-            <div class="dropdown-content">
-              <label><input type="checkbox" /> Popularity</label>
-              <label><input type="checkbox" /> Latest</label>
-              <label><input type="checkbox" /> Oldest</label>
-              <label><input type="checkbox" /> A-Z</label>
-              <label><input type="checkbox" /> Z-A</label>
-              <label><input type="checkbox" /> Highest Rated</label>
-            </div>
-          </div>
-        </div>
-
-        <button class="filter-btn">Filter Now</button>
-
-        <!-- Anime Grid -->
-        <!-- <div class="anime-grid">
+          <!-- Anime Grid -->
+          <!-- <div class="anime-grid">
           <div class="anime-card">
             <img src="Images/anime1.jpg" alt="Anime 1" />
           </div>
@@ -238,430 +246,509 @@
             <img src="Images/anime4.jpg" alt="Anime 4" />
           </div>
         </div> -->
-      </section>
+        </section>
 
-      <!-- <section class="recently-added">
+        <!-- <section class="recently-added">
         <div class="recently-added-title">
           <h4>RECENTLY UPDATED</h4>
           <p>SUNDAY 23 SEPT 2025</p>
         </div>
       </section> -->
-      <section>
-        <div class="anime-grid">
-          <!-- Example Card -->
-          <div class="anime-card">
-            <img src="Images/Attack on Titan.jpeg" alt="Attack on Titan" />
-            <div class="overlay">
-              <a href="streaming.html"><i class="fa-solid fa-play"></i></a>
-            </div>
-            <div class="card-info">
-              <div class="tags">
-                <a href="streaming.html">DUB</a><a href="streaming.html">SUB</a
-                ><span style="color: #b4b4b4">TV</span>
+        <section>
+          <div class="anime-grid">
+            <!-- Example Card -->
+            <div class="anime-card">
+              <img src="Images/Attack on Titan.jpeg" alt="Attack on Titan" />
+              <div class="overlay">
+                <a href="streaming.html"><i class="fa-solid fa-play"></i></a>
               </div>
-              <p class="anime-title">Attack on Titan</p>
+              <div class="card-info">
+                <div class="tags">
+                  <a href="streaming.html">DUB</a
+                  ><a href="streaming.html">SUB</a
+                  ><span style="color: #b4b4b4">TV</span>
+                </div>
+                <p class="anime-title">Attack on Titan</p>
+              </div>
+
+              <div class="menu">
+                <i class="fa-solid fa-list menu-icon"></i>
+                <div class="dropdown">
+                  <a href="streaming.html"
+                    ><i class="fa-regular fa-clock"></i> Watch Later</a
+                  >
+                  <a href="streaming.html"
+                    ><i class="fa-solid fa-plus"></i> Add to Playlist</a
+                  >
+                </div>
+              </div>
             </div>
 
-            <div class="menu">
-              <i class="fa-solid fa-list menu-icon"></i>
-              <div class="dropdown">
-                <a href="streaming.html"
-                  ><i class="fa-regular fa-clock"></i> Watch Later</a
-                >
-                <a href="streaming.html"
-                  ><i class="fa-solid fa-plus"></i> Add to Playlist</a
-                >
+            <div class="anime-card">
+              <img src="Images/img-21.png" alt="Black Bullet" />
+              <div class="overlay">
+                <a href="streaming.html"><i class="fa-solid fa-play"></i></a>
+              </div>
+              <div class="card-info">
+                <div class="tags">
+                  <a href="streaming.html">DUB</a
+                  ><a href="streaming.html">SUB</a
+                  ><span style="color: #b4b4b4">TV</span>
+                </div>
+                <p class="anime-title">Black Bullet</p>
+              </div>
+
+              <div class="menu">
+                <i class="fa-solid fa-list menu-icon"></i>
+                <div class="dropdown">
+                  <a href="#"
+                    ><i class="fa-regular fa-clock"></i> Watch Later</a
+                  >
+                  <a href="#"
+                    ><i class="fa-solid fa-plus"></i> Add to Playlist</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="anime-card">
+              <img src="Images/img-4.png" alt="Chainsaw Man" />
+              <div class="overlay">
+                <a href="streaming.html"><i class="fa-solid fa-play"></i></a>
+              </div>
+              <div class="card-info">
+                <div class="tags">
+                  <a href="streaming.html">DUB</a
+                  ><a href="streaming.html">SUB</a
+                  ><span style="color: #b4b4b4">TV</span>
+                </div>
+                <p class="anime-title">Chainsaw Man</p>
+              </div>
+
+              <div class="menu">
+                <i class="fa-solid fa-list menu-icon"></i>
+                <div class="dropdown">
+                  <a href="#"
+                    ><i class="fa-regular fa-clock"></i> Watch Later</a
+                  >
+                  <a href="#"
+                    ><i class="fa-solid fa-plus"></i> Add to Playlist</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="anime-card">
+              <img src="Images/Kny _Infinity castle_.jpeg" alt="Demon Slayer" />
+              <div class="overlay">
+                <a href="streaming.html"><i class="fa-solid fa-play"></i></a>
+              </div>
+              <div class="card-info">
+                <div class="tags">
+                  <a href="streaming.html">DUB</a
+                  ><a href="streaming.html">SUB</a
+                  ><span style="color: #b4b4b4">TV</span>
+                </div>
+                <p class="anime-title">Demon Slayer</p>
+              </div>
+
+              <div class="menu">
+                <i class="fa-solid fa-list menu-icon"></i>
+                <div class="dropdown">
+                  <a href="#"
+                    ><i class="fa-regular fa-clock"></i> Watch Later</a
+                  >
+                  <a href="#"
+                    ><i class="fa-solid fa-plus"></i> Add to Playlist</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="anime-card">
+              <img src="Images/img-5.png" alt="Haikyu" />
+              <div class="overlay">
+                <a href="streaming.html"><i class="fa-solid fa-play"></i></a>
+              </div>
+              <div class="card-info">
+                <div class="tags">
+                  <a href="streaming.html">DUB</a
+                  ><a href="streaming.html">SUB</a
+                  ><span style="color: #b4b4b4">TV</span>
+                </div>
+                <p class="anime-title">Haikyu</p>
+              </div>
+
+              <div class="menu">
+                <i class="fa-solid fa-list menu-icon"></i>
+                <div class="dropdown">
+                  <a href="#"
+                    ><i class="fa-regular fa-clock"></i> Watch Later</a
+                  >
+                  <a href="#"
+                    ><i class="fa-solid fa-plus"></i> Add to Playlist</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="anime-card">
+              <img src="Images/img-17.png" alt="Hunter X Hunter" />
+              <div class="overlay">
+                <a href="streaming.html"><i class="fa-solid fa-play"></i></a>
+              </div>
+              <div class="card-info">
+                <div class="tags">
+                  <a href="streaming.html">DUB</a
+                  ><a href="streaming.html">SUB</a
+                  ><span style="color: #b4b4b4">TV</span>
+                </div>
+                <p class="anime-title">Hunter X Hunter</p>
+              </div>
+
+              <div class="menu">
+                <i class="fa-solid fa-list menu-icon"></i>
+                <div class="dropdown">
+                  <a href="#"
+                    ><i class="fa-regular fa-clock"></i> Watch Later</a
+                  >
+                  <a href="#"
+                    ><i class="fa-solid fa-plus"></i> Add to Playlist</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="anime-card">
+              <img src="Images/download.jpeg" alt="Jujutsu Kaisen" />
+              <div class="overlay">
+                <a href="streaming.html"><i class="fa-solid fa-play"></i></a>
+              </div>
+              <div class="card-info">
+                <div class="tags">
+                  <a href="streaming.html">DUB</a
+                  ><a href="streaming.html">SUB</a
+                  ><span style="color: #b4b4b4">TV</span>
+                </div>
+                <p class="anime-title">Jujutsu Kaisen</p>
+              </div>
+
+              <div class="menu">
+                <i class="fa-solid fa-list menu-icon"></i>
+                <div class="dropdown">
+                  <a href="#"
+                    ><i class="fa-regular fa-clock"></i> Watch Later</a
+                  >
+                  <a href="#"
+                    ><i class="fa-solid fa-plus"></i> Add to Playlist</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="anime-card">
+              <img src="Images/img-22.png" alt="Kiznaiver" />
+              <div class="overlay">
+                <a href="streaming.html"><i class="fa-solid fa-play"></i></a>
+              </div>
+              <div class="card-info">
+                <div class="tags">
+                  <a href="streaming.html">DUB</a
+                  ><a href="streaming.html">SUB</a
+                  ><span style="color: #b4b4b4">TV</span>
+                </div>
+                <p class="anime-title">Kiznaiver</p>
+              </div>
+
+              <div class="menu">
+                <i class="fa-solid fa-list menu-icon"></i>
+                <div class="dropdown">
+                  <a href="#"
+                    ><i class="fa-regular fa-clock"></i> Watch Later</a
+                  >
+                  <a href="#"
+                    ><i class="fa-solid fa-plus"></i> Add to Playlist</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="anime-card">
+              <img src="Images/Shippuden.jpeg" alt="Naruto: Shippuden" />
+              <div class="overlay">
+                <a href="streaming.html"><i class="fa-solid fa-play"></i></a>
+              </div>
+              <div class="card-info">
+                <div class="tags">
+                  <a href="streaming.html">DUB</a
+                  ><a href="streaming.html">SUB</a
+                  ><span style="color: #b4b4b4">TV</span>
+                </div>
+                <p class="anime-title">Naruto: Shippuden</p>
+              </div>
+
+              <div class="menu">
+                <i class="fa-solid fa-list menu-icon"></i>
+                <div class="dropdown">
+                  <a href="#"
+                    ><i class="fa-regular fa-clock"></i> Watch Later</a
+                  >
+                  <a href="#"
+                    ><i class="fa-solid fa-plus"></i> Add to Playlist</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="anime-card">
+              <img src="Images/img-6.png" alt="Psycho Pass" />
+              <div class="overlay">
+                <a href="streaming.html"><i class="fa-solid fa-play"></i></a>
+              </div>
+              <div class="card-info">
+                <div class="tags">
+                  <a href="streaming.html">DUB</a
+                  ><a href="streaming.html">SUB</a
+                  ><span style="color: #b4b4b4">TV</span>
+                </div>
+                <p class="anime-title">Psycho Pass</p>
+              </div>
+
+              <div class="menu">
+                <i class="fa-solid fa-list menu-icon"></i>
+                <div class="dropdown">
+                  <a href="#"
+                    ><i class="fa-regular fa-clock"></i> Watch Later</a
+                  >
+                  <a href="#"
+                    ><i class="fa-solid fa-plus"></i> Add to Playlist</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="anime-card">
+              <img src="Images/Rezero.jpeg" alt="Re-Zero" />
+              <div class="overlay">
+                <a href="streaming.html"><i class="fa-solid fa-play"></i></a>
+              </div>
+              <div class="card-info">
+                <div class="tags">
+                  <a href="streaming.html">DUB</a
+                  ><a href="streaming.html">SUB</a
+                  ><span style="color: #b4b4b4">TV</span>
+                </div>
+                <p class="anime-title">Re-Zero</p>
+              </div>
+
+              <div class="menu">
+                <i class="fa-solid fa-list menu-icon"></i>
+                <div class="dropdown">
+                  <a href="#"
+                    ><i class="fa-regular fa-clock"></i> Watch Later</a
+                  >
+                  <a href="#"
+                    ><i class="fa-solid fa-plus"></i> Add to Playlist</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="anime-card">
+              <img
+                src="Images/SOLO LEVELING WALLPAPER.jpeg"
+                alt="Solo leveling"
+              />
+              <div class="overlay">
+                <a href="streaming.html"><i class="fa-solid fa-play"></i></a>
+              </div>
+              <div class="card-info">
+                <div class="tags">
+                  <a href="streaming.html">DUB</a
+                  ><a href="streaming.html">SUB</a
+                  ><span style="color: #b4b4b4">TV</span>
+                </div>
+                <p class="anime-title">Solo Leveling</p>
+              </div>
+
+              <div class="menu">
+                <i class="fa-solid fa-list menu-icon"></i>
+                <div class="dropdown">
+                  <a href="#"
+                    ><i class="fa-regular fa-clock"></i> Watch Later</a
+                  >
+                  <a href="#"
+                    ><i class="fa-solid fa-plus"></i> Add to Playlist</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Repeat similar blocks for other anime cards -->
+            <div class="anime-card">
+              <img
+                src="Images/Tokyo Ghoul (Season 1) [2014].jpeg"
+                alt="Tokyo Ghoul"
+              />
+              <div class="overlay">
+                <a href="streaming.html"><i class="fa-solid fa-play"></i></a>
+              </div>
+              <div class="card-info">
+                <div class="tags">
+                  <a href="streaming.html">DUB</a
+                  ><a href="streaming.html">SUB</a
+                  ><span style="color: #b4b4b4">TV</span>
+                </div>
+                <p class="anime-title">Tokyo Ghoul</p>
+              </div>
+
+              <div class="menu">
+                <i class="fa-solid fa-list menu-icon"></i>
+                <div class="dropdown">
+                  <a href="#"
+                    ><i class="fa-regular fa-clock"></i> Watch Later</a
+                  >
+                  <a href="#"
+                    ><i class="fa-solid fa-plus"></i> Add to Playlist</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="anime-card">
+              <img src="Images/Vinland Saga_Poster.jpeg" alt="Vinland Saga" />
+              <div class="overlay">
+                <a href="streaming.html"><i class="fa-solid fa-play"></i></a>
+              </div>
+              <div class="card-info">
+                <div class="tags">
+                  <a href="streaming.html">DUB</a
+                  ><a href="streaming.html">SUB</a
+                  ><span style="color: #b4b4b4">TV</span>
+                </div>
+                <p class="anime-title">Vinland Saga</p>
+              </div>
+
+              <div class="menu">
+                <i class="fa-solid fa-list menu-icon"></i>
+                <div class="dropdown">
+                  <a href="#"
+                    ><i class="fa-regular fa-clock"></i> Watch Later</a
+                  >
+                  <a href="#"
+                    ><i class="fa-solid fa-plus"></i> Add to Playlist</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="anime-card">
+              <img src="Images/img-7.png" alt="Your Name" />
+              <div class="overlay">
+                <a href="streaming.html"><i class="fa-solid fa-play"></i></a>
+              </div>
+              <div class="card-info">
+                <div class="tags">
+                  <a href="streaming.html">DUB</a
+                  ><a href="streaming.html">SUB</a
+                  ><span style="color: #b4b4b4">TV</span>
+                </div>
+                <p class="anime-title">Your Name</p>
+              </div>
+
+              <div class="menu">
+                <i class="fa-solid fa-list menu-icon"></i>
+                <div class="dropdown">
+                  <a href="#"
+                    ><i class="fa-regular fa-clock"></i> Watch Later</a
+                  >
+                  <a href="#"
+                    ><i class="fa-solid fa-plus"></i> Add to Playlist</a
+                  >
+                </div>
               </div>
             </div>
           </div>
+        </section>
 
-          <div class="anime-card">
-            <img src="Images/img-21.png" alt="Black Bullet" />
-            <div class="overlay">
-              <a href="streaming.html"><i class="fa-solid fa-play"></i></a>
-            </div>
-            <div class="card-info">
-              <div class="tags">
-                <a href="streaming.html">DUB</a><a href="streaming.html">SUB</a
-                ><span style="color: #b4b4b4">TV</span>
-              </div>
-              <p class="anime-title">Black Bullet</p>
-            </div>
+        <div class="wrap">
+          <div class="pagination" aria-label="Pagination">
+            <a class="chev" href="#" aria-label="Previous" title="Previous"
+              >&lt;</a
+            >
 
-            <div class="menu">
-              <i class="fa-solid fa-list menu-icon"></i>
-              <div class="dropdown">
-                <a href="#"><i class="fa-regular fa-clock"></i> Watch Later</a>
-                <a href="#"><i class="fa-solid fa-plus"></i> Add to Playlist</a>
-              </div>
-            </div>
-          </div>
+            <a class="page active" href="#" data-page="1" aria-label="Page 1"
+              >1</a
+            >
+            <a class="page muted" href="#" data-page="2" aria-label="Page 2"
+              >2</a
+            >
+            <a class="page muted" href="#" data-page="3" aria-label="Page 3"
+              >3</a
+            >
+            <a class="page muted" href="#" data-page="4" aria-label="Page 4"
+              >4</a
+            >
 
-          <div class="anime-card">
-            <img src="Images/img-4.png" alt="Chainsaw Man" />
-            <div class="overlay">
-              <a href="streaming.html"><i class="fa-solid fa-play"></i></a>
-            </div>
-            <div class="card-info">
-              <div class="tags">
-                <a href="streaming.html">DUB</a><a href="streaming.html">SUB</a
-                ><span style="color: #b4b4b4">TV</span>
-              </div>
-              <p class="anime-title">Chainsaw Man</p>
-            </div>
-
-            <div class="menu">
-              <i class="fa-solid fa-list menu-icon"></i>
-              <div class="dropdown">
-                <a href="#"><i class="fa-regular fa-clock"></i> Watch Later</a>
-                <a href="#"><i class="fa-solid fa-plus"></i> Add to Playlist</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="anime-card">
-            <img src="Images/Kny _Infinity castle_.jpeg" alt="Demon Slayer" />
-            <div class="overlay">
-              <a href="streaming.html"><i class="fa-solid fa-play"></i></a>
-            </div>
-            <div class="card-info">
-              <div class="tags">
-                <a href="streaming.html">DUB</a><a href="streaming.html">SUB</a
-                ><span style="color: #b4b4b4">TV</span>
-              </div>
-              <p class="anime-title">Demon Slayer</p>
-            </div>
-
-            <div class="menu">
-              <i class="fa-solid fa-list menu-icon"></i>
-              <div class="dropdown">
-                <a href="#"><i class="fa-regular fa-clock"></i> Watch Later</a>
-                <a href="#"><i class="fa-solid fa-plus"></i> Add to Playlist</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="anime-card">
-            <img src="Images/img-5.png" alt="Haikyu" />
-            <div class="overlay">
-              <a href="streaming.html"><i class="fa-solid fa-play"></i></a>
-            </div>
-            <div class="card-info">
-              <div class="tags">
-                <a href="streaming.html">DUB</a><a href="streaming.html">SUB</a
-                ><span style="color: #b4b4b4">TV</span>
-              </div>
-              <p class="anime-title">Haikyu</p>
-            </div>
-
-            <div class="menu">
-              <i class="fa-solid fa-list menu-icon"></i>
-              <div class="dropdown">
-                <a href="#"><i class="fa-regular fa-clock"></i> Watch Later</a>
-                <a href="#"><i class="fa-solid fa-plus"></i> Add to Playlist</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="anime-card">
-            <img src="Images/img-17.png" alt="Hunter X Hunter" />
-            <div class="overlay">
-              <a href="streaming.html"><i class="fa-solid fa-play"></i></a>
-            </div>
-            <div class="card-info">
-              <div class="tags">
-                <a href="streaming.html">DUB</a><a href="streaming.html">SUB</a
-                ><span style="color: #b4b4b4">TV</span>
-              </div>
-              <p class="anime-title">Hunter X Hunter</p>
-            </div>
-
-            <div class="menu">
-              <i class="fa-solid fa-list menu-icon"></i>
-              <div class="dropdown">
-                <a href="#"><i class="fa-regular fa-clock"></i> Watch Later</a>
-                <a href="#"><i class="fa-solid fa-plus"></i> Add to Playlist</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="anime-card">
-            <img src="Images/download.jpeg" alt="Jujutsu Kaisen" />
-            <div class="overlay">
-              <a href="streaming.html"><i class="fa-solid fa-play"></i></a>
-            </div>
-            <div class="card-info">
-              <div class="tags">
-                <a href="streaming.html">DUB</a><a href="streaming.html">SUB</a
-                ><span style="color: #b4b4b4">TV</span>
-              </div>
-              <p class="anime-title">Jujutsu Kaisen</p>
-            </div>
-
-            <div class="menu">
-              <i class="fa-solid fa-list menu-icon"></i>
-              <div class="dropdown">
-                <a href="#"><i class="fa-regular fa-clock"></i> Watch Later</a>
-                <a href="#"><i class="fa-solid fa-plus"></i> Add to Playlist</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="anime-card">
-            <img src="Images/img-22.png" alt="Kiznaiver" />
-            <div class="overlay">
-              <a href="streaming.html"><i class="fa-solid fa-play"></i></a>
-            </div>
-            <div class="card-info">
-              <div class="tags">
-                <a href="streaming.html">DUB</a><a href="streaming.html">SUB</a
-                ><span style="color: #b4b4b4">TV</span>
-              </div>
-              <p class="anime-title">Kiznaiver</p>
-            </div>
-
-            <div class="menu">
-              <i class="fa-solid fa-list menu-icon"></i>
-              <div class="dropdown">
-                <a href="#"><i class="fa-regular fa-clock"></i> Watch Later</a>
-                <a href="#"><i class="fa-solid fa-plus"></i> Add to Playlist</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="anime-card">
-            <img src="Images/Shippuden.jpeg" alt="Naruto: Shippuden" />
-            <div class="overlay">
-              <a href="streaming.html"><i class="fa-solid fa-play"></i></a>
-            </div>
-            <div class="card-info">
-              <div class="tags">
-                <a href="streaming.html">DUB</a><a href="streaming.html">SUB</a
-                ><span style="color: #b4b4b4">TV</span>
-              </div>
-              <p class="anime-title">Naruto: Shippuden</p>
-            </div>
-
-            <div class="menu">
-              <i class="fa-solid fa-list menu-icon"></i>
-              <div class="dropdown">
-                <a href="#"><i class="fa-regular fa-clock"></i> Watch Later</a>
-                <a href="#"><i class="fa-solid fa-plus"></i> Add to Playlist</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="anime-card">
-            <img src="Images/img-6.png" alt="Psycho Pass" />
-            <div class="overlay">
-              <a href="streaming.html"><i class="fa-solid fa-play"></i></a>
-            </div>
-            <div class="card-info">
-              <div class="tags">
-                <a href="streaming.html">DUB</a><a href="streaming.html">SUB</a
-                ><span style="color: #b4b4b4">TV</span>
-              </div>
-              <p class="anime-title">Psycho Pass</p>
-            </div>
-
-            <div class="menu">
-              <i class="fa-solid fa-list menu-icon"></i>
-              <div class="dropdown">
-                <a href="#"><i class="fa-regular fa-clock"></i> Watch Later</a>
-                <a href="#"><i class="fa-solid fa-plus"></i> Add to Playlist</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="anime-card">
-            <img src="Images/Rezero.jpeg" alt="Re-Zero" />
-            <div class="overlay">
-              <a href="streaming.html"><i class="fa-solid fa-play"></i></a>
-            </div>
-            <div class="card-info">
-              <div class="tags">
-                <a href="streaming.html">DUB</a><a href="streaming.html">SUB</a
-                ><span style="color: #b4b4b4">TV</span>
-              </div>
-              <p class="anime-title">Re-Zero</p>
-            </div>
-
-            <div class="menu">
-              <i class="fa-solid fa-list menu-icon"></i>
-              <div class="dropdown">
-                <a href="#"><i class="fa-regular fa-clock"></i> Watch Later</a>
-                <a href="#"><i class="fa-solid fa-plus"></i> Add to Playlist</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="anime-card">
-            <img
-              src="Images/SOLO LEVELING WALLPAPER.jpeg"
-              alt="Solo leveling"
-            />
-            <div class="overlay">
-              <a href="streaming.html"><i class="fa-solid fa-play"></i></a>
-            </div>
-            <div class="card-info">
-              <div class="tags">
-                <a href="streaming.html">DUB</a><a href="streaming.html">SUB</a
-                ><span style="color: #b4b4b4">TV</span>
-              </div>
-              <p class="anime-title">Solo Leveling</p>
-            </div>
-
-            <div class="menu">
-              <i class="fa-solid fa-list menu-icon"></i>
-              <div class="dropdown">
-                <a href="#"><i class="fa-regular fa-clock"></i> Watch Later</a>
-                <a href="#"><i class="fa-solid fa-plus"></i> Add to Playlist</a>
-              </div>
-            </div>
-          </div>
-          <!-- Repeat similar blocks for other anime cards -->
-          <div class="anime-card">
-            <img
-              src="Images/Tokyo Ghoul (Season 1) [2014].jpeg"
-              alt="Tokyo Ghoul"
-            />
-            <div class="overlay">
-              <a href="streaming.html"><i class="fa-solid fa-play"></i></a>
-            </div>
-            <div class="card-info">
-              <div class="tags">
-                <a href="streaming.html">DUB</a><a href="streaming.html">SUB</a
-                ><span style="color: #b4b4b4">TV</span>
-              </div>
-              <p class="anime-title">Tokyo Ghoul</p>
-            </div>
-
-            <div class="menu">
-              <i class="fa-solid fa-list menu-icon"></i>
-              <div class="dropdown">
-                <a href="#"><i class="fa-regular fa-clock"></i> Watch Later</a>
-                <a href="#"><i class="fa-solid fa-plus"></i> Add to Playlist</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="anime-card">
-            <img src="Images/Vinland Saga_Poster.jpeg" alt="Vinland Saga" />
-            <div class="overlay">
-              <a href="streaming.html"><i class="fa-solid fa-play"></i></a>
-            </div>
-            <div class="card-info">
-              <div class="tags">
-                <a href="streaming.html">DUB</a><a href="streaming.html">SUB</a
-                ><span style="color: #b4b4b4">TV</span>
-              </div>
-              <p class="anime-title">Vinland Saga</p>
-            </div>
-
-            <div class="menu">
-              <i class="fa-solid fa-list menu-icon"></i>
-              <div class="dropdown">
-                <a href="#"><i class="fa-regular fa-clock"></i> Watch Later</a>
-                <a href="#"><i class="fa-solid fa-plus"></i> Add to Playlist</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="anime-card">
-            <img src="Images/img-7.png" alt="Your Name" />
-            <div class="overlay">
-              <a href="streaming.html"><i class="fa-solid fa-play"></i></a>
-            </div>
-            <div class="card-info">
-              <div class="tags">
-                <a href="streaming.html">DUB</a><a href="streaming.html">SUB</a
-                ><span style="color: #b4b4b4">TV</span>
-              </div>
-              <p class="anime-title">Your Name</p>
-            </div>
-
-            <div class="menu">
-              <i class="fa-solid fa-list menu-icon"></i>
-              <div class="dropdown">
-                <a href="#"><i class="fa-regular fa-clock"></i> Watch Later</a>
-                <a href="#"><i class="fa-solid fa-plus"></i> Add to Playlist</a>
-              </div>
-            </div>
+            <a class="chev" href="#" aria-label="Next" title="Next">&gt;</a>
           </div>
         </div>
-      </section>
+      </main>
 
-      <div class="wrap">
-        <div class="pagination" aria-label="Pagination">
-          <a class="chev" href="#" aria-label="Previous" title="Previous"
-            >&lt;</a
-          >
+      <footer class="footer">
+        <div class="footer-content">
+          <!-- Left section -->
+          <div class="footer-left">
+            <a href="index.html" class="footer-logo"
+              ><img src="Images/logo.png" alt="AnimeLoop Logo"
+            /></a>
+            <p class="footer-desc">
+              AnimeLoop is your go-to platform for streaming, discovering, and
+              discussing the latest and greatest anime series and movies. Join
+              our community to stay updated, share your favorites, and connect
+              with fellow fans!
+            </p>
 
-          <a class="page active" href="#" data-page="1" aria-label="Page 1"
-            >1</a
-          >
-          <a class="page muted" href="#" data-page="2" aria-label="Page 2">2</a>
-          <a class="page muted" href="#" data-page="3" aria-label="Page 3">3</a>
-          <a class="page muted" href="#" data-page="4" aria-label="Page 4">4</a>
-
-          <a class="chev" href="#" aria-label="Next" title="Next">&gt;</a>
-        </div>
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-content">
-        <!-- Left section -->
-        <div class="footer-left">
-          <a href="index.html" class="footer-logo"
-            ><img src="Images/logo.png" alt="AnimeLoop Logo"
-          /></a>
-          <p class="footer-desc">
-            AnimeLoop is your go-to platform for streaming, discovering, and
-            discussing the latest and greatest anime series and movies. Join our
-            community to stay updated, share your favorites, and connect with
-            fellow fans!
-          </p>
-
-          <div class="footer-social">
-            <h3>JOIN US ON</h3>
-            <div class="social-icons">
-              <a href="#"><i class="fa-brands fa-reddit"></i></a>
-              <a href="#"><i class="fa-brands fa-discord"></i></a>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <div class="footer-social">
+              <h3>JOIN US ON</h3>
+              <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-reddit"></i></a>
+                <a href="#"><i class="fa-brands fa-discord"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+              </div>
             </div>
+          </div>
+
+          <!-- Right section -->
+          <div class="footer-right">
+            <h3>GET NOTIFIED</h3>
+            <p>Get emails for latest news about anime, and more.</p>
+            <form class="subscribe-form">
+              <input type="email" placeholder="info@example.com" required />
+              <button type="submit">Subscribe</button>
+            </form>
+            <p class="terms">
+              By subscribing you agree to our
+              <a href="#">terms and conditions</a>
+            </p>
           </div>
         </div>
 
-        <!-- Right section -->
-        <div class="footer-right">
-          <h3>GET NOTIFIED</h3>
-          <p>Get emails for latest news about anime, and more.</p>
-          <form class="subscribe-form">
-            <input type="email" placeholder="info@example.com" required />
-            <button type="submit">Subscribe</button>
-          </form>
-          <p class="terms">
-            By subscribing you agree to our <a href="#">terms and conditions</a>
-          </p>
+        <!-- Bottom bar -->
+        <div class="footer-bottom">
+          <p>© 2025 All rights reserved by Valentine.</p>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Comments Policy</a>
+          </div>
         </div>
-      </div>
+      </footer>
 
-      <!-- Bottom bar -->
-      <div class="footer-bottom">
-        <p>© 2025 All rights reserved by Valentine.</p>
-        <div class="footer-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Comments Policy</a>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" title="Go to top">
-      <i class="fa-solid fa-angles-up"></i>
-    </button>
+      <!-- Back to Top Button -->
+      <button id="backToTop" title="Go to top">
+        <i class="fa-solid fa-angles-up"></i>
+      </button>
+    </div>
 
     <script src="search.js"></script>
   </body>

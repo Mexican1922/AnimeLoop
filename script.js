@@ -1,4 +1,14 @@
 // script.js
+
+// Simulate loading time
+window.addEventListener("load", function () {
+  const loader = document.getElementById("loader");
+  const content = document.getElementById("content");
+
+  loader.style.display = "none"; // hide loader
+  content.style.display = "block"; // show content
+});
+
 // Hamburger toggle
 const menuToggle = document.querySelector(".menu-toggle");
 const navbar = document.querySelector(".navbar");

@@ -23,284 +23,303 @@
     />
   </head>
   <body>
-    <nav class="navbar">
-      <div class="logo">
-        <a href="index.html"
-          ><img src="Images/logo.png" alt="Anime Loop Logo"
-        /></a>
-      </div>
+    <!-- Loading Screen -->
+    <div id="loader">
+      <div class="spinner"></div>
+      <img src="Images/Anime-loop-preloader-white.gif" alt="Loading Image" />
+    </div>
 
-      <!-- Hamburger -->
-      <div class="menu-toggle">
-        <i class="fa-solid fa-bars"></i>
-      </div>
-
-      <!-- Collapsible Menu -->
-      <div class="menu-items">
-        <div class="nav-links">
-          <ul>
-            <li><a href="index.html" class="home">Home</a></li>
-            <li><a href="blog.html" class="movie active">Blog</a></li>
-            <li><a href="manga.html" class="manga">Manga</a></li>
-            <li class="pages">
-              <a href="#" id="pagesLink">Pages</a>
-              <ul class="dropdown" id="pagesDropdown">
-                <li><a href="sign.html">Sign Up</a></li>
-                <li><a href="log.html">Log In</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Search + Auth inside menu -->
-        <div class="search-auth">
-          <form action="search.html">
-            <span><i class="fa-solid fa-magnifying-glass"></i></span>
-            <input type="text" placeholder="Search" />
-          </form>
-          <ul>
-            <li><a href="sign.html" class="sign-up">SIGN UP</a></li>
-            <li><a href="log.html" class="log-in">LOG IN</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <main>
-      <div class="blog-top">
-        <p>
-          <a href="index.html">Anime</a>&ensp;&ensp; /
-          <span class="active">&ensp;&ensp; Blogs</span>
-        </p>
-      </div>
-
-      <section class="blog-section">
-        <div class="blog-container">
-          <!-- Blog Grid -->
-          <div class="blog-grid">
-            <!-- Blog Card 1 -->
-            <a href="blogdetail.html" class="blog-card">
-              <img
-                class="blog-img"
-                src="Images/blog-img-1.png"
-                alt="Blog Image"
-              />
-              <div class="blog-content">
-                <div class="blog-meta">
-                  <span>28 NOV 2023</span>
-                  <span>Anime</span>
-                </div>
-                <h3>WHY ONE PIECE’S 948TH EPISODE</h3>
-                <div class="blog-author">
-                  <img src="Images/comment-img.png" alt="Author" />
-                  <span>Author: Rashik</span>
-                </div>
-              </div>
-            </a>
-
-            <!-- Blog Card 2 -->
-            <a href="blogdetail-2.html" class="blog-card">
-              <img
-                class="blog-img"
-                src="Images/blog-img-2.png"
-                alt="Blog Image"
-              />
-              <div class="blog-content">
-                <div class="blog-meta">
-                  <span>23 SEPT 2025</span>
-                  <span>Manga</span>
-                </div>
-                <h3>ANIME COMMUNITY IS GOING MAD</h3>
-                <div class="blog-author">
-                  <img src="Images/comment-img-3.png" alt="Author" />
-                  <span>Author: Jake</span>
-                </div>
-              </div>
-            </a>
-
-            <!-- Blog Card 3 -->
-            <a href="blogdetail-2.html" class="blog-card">
-              <img
-                class="blog-img"
-                src="Images/blog-img-3.png"
-                alt="Blog Image"
-              />
-              <div class="blog-content">
-                <div class="blog-meta">
-                  <span>15 DEC 2023</span>
-                  <span>News</span>
-                </div>
-                <h3>NEW SEASON ANNOUNCED!</h3>
-                <div class="blog-author">
-                  <img src="Images/comment-img-4.png" alt="Author" />
-                  <span>Author: Sarah</span>
-                </div>
-              </div>
-            </a>
-
-            <!-- Blog Card 4 -->
-            <a href="blogdetail.html" class="blog-card">
-              <img
-                class="blog-img"
-                src="Images/dex-ezekiel-IxDPZ-AHfoI-unsplash.jpg"
-                alt="Blog Image"
-              />
-              <div class="blog-content">
-                <div class="blog-meta">
-                  <span>28 NOV 2024</span>
-                  <span>Review</span>
-                </div>
-                <h3>TOP ANIME TO WATCH</h3>
-                <div class="blog-author">
-                  <img src="Images/comment-img-5.png" alt="Author" />
-                  <span>Author: Phillips</span>
-                </div>
-              </div>
-            </a>
-
-            <!-- Blog Card 5 -->
-            <a href="blogdetail.html" class="blog-card">
-              <img
-                class="blog-img"
-                src="Images/blog-img-5.png"
-                alt="Blog Image"
-              />
-              <div class="blog-content">
-                <div class="blog-meta">
-                  <span>2 NOV 2024</span>
-                  <span>Action</span>
-                </div>
-                <h3>BATTLE OF HEROES!</h3>
-                <div class="blog-author">
-                  <img src="Images/comment-img-6.png" alt="Author" />
-                  <span>Author: Tom</span>
-                </div>
-              </div>
-            </a>
-
-            <!-- Blog Card 6 -->
-            <a href="blogdetail-2.html" class="blog-card">
-              <img class="blog-img" src="Images/manga7.png" alt="Blog Image" />
-              <div class="blog-content">
-                <div class="blog-meta">
-                  <span>12 MAY 2023</span>
-                  <span>Fantasy</span>
-                </div>
-                <h3>MAGICAL WORLD REVEALED</h3>
-                <div class="blog-author">
-                  <img src="Images/comment-img-2.png" alt="Author" />
-                  <span>Author: Jessica</span>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- End Blog Grid -->
-
-          <!-- Sidebar -->
-          <aside class="sidebar">
-            <!-- Search -->
-            <div class="search-box">
-              <input type="text" placeholder="Search" />
-              <i class="fa fa-search"></i>
-            </div>
-
-            <!-- Tags -->
-            <div class="tags">
-              <h3>Tags</h3>
-              <a href="search.html">Anime</a>
-              <a href="search.html">Shounen</a>
-              <a href="search.html">Super Hero</a>
-              <a href="search.html">Fantasy</a>
-              <!-- <a href="#">Action</a>
-              <a href="#">Thriller</a> -->
-            </div>
-
-            <!-- Categories -->
-            <div class="categories">
-              <h3>Categories</h3>
-              <ul>
-                <li><a href="search.html">Anime</a></li>
-                <li><a href="manga.html">Manga</a></li>
-                <li><a href="search.html">Cosplay</a></li>
-                <li><a href="mangadetail.html">Light Novel</a></li>
-              </ul>
-            </div>
-          </aside>
-        </div>
-      </section>
-
-      <div class="wrap">
-        <div class="pagination" aria-label="Pagination">
-          <a class="chev" href="#" aria-label="Previous" title="Previous"
-            >&lt;</a
-          >
-
-          <a class="page active" href="#" data-page="1" aria-label="Page 1"
-            >1</a
-          >
-          <a class="page muted" href="#" data-page="2" aria-label="Page 2">2</a>
-          <a class="page muted" href="#" data-page="3" aria-label="Page 3">3</a>
-          <a class="page muted" href="#" data-page="4" aria-label="Page 4">4</a>
-
-          <a class="chev" href="#" aria-label="Next" title="Next">&gt;</a>
-        </div>
-      </div>
-    </main>
-    <footer class="footer">
-      <div class="footer-content">
-        <!-- Left section -->
-        <div class="footer-left">
-          <a href="index.html" class="footer-logo"
-            ><img src="Images/logo.png" alt="AnimeLoop Logo"
+    <!-- Main Content -->
+    <div id="content" style="display: none">
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="Images/logo.png" alt="Anime Loop Logo"
           /></a>
-          <p class="footer-desc">
-            AnimeLoop is your go-to platform for streaming, discovering, and
-            discussing the latest and greatest anime series and movies. Join our
-            community to stay updated, share your favorites, and connect with
-            fellow fans!
-          </p>
+        </div>
 
-          <div class="footer-social">
-            <h3>JOIN US ON</h3>
-            <div class="social-icons">
-              <a href="#"><i class="fa-brands fa-reddit"></i></a>
-              <a href="#"><i class="fa-brands fa-discord"></i></a>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <!-- Hamburger -->
+        <div class="menu-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <!-- Collapsible Menu -->
+        <div class="menu-items">
+          <div class="nav-links">
+            <ul>
+              <li><a href="index.html" class="home">Home</a></li>
+              <li><a href="blog.html" class="movie active">Blog</a></li>
+              <li><a href="manga.html" class="manga">Manga</a></li>
+              <li class="pages">
+                <a href="#" id="pagesLink">Pages</a>
+                <ul class="dropdown" id="pagesDropdown">
+                  <li><a href="sign.html">Sign Up</a></li>
+                  <li><a href="log.html">Log In</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Search + Auth inside menu -->
+          <div class="search-auth">
+            <form action="search.html">
+              <span><i class="fa-solid fa-magnifying-glass"></i></span>
+              <input type="text" placeholder="Search" />
+            </form>
+            <ul>
+              <li><a href="sign.html" class="sign-up">SIGN UP</a></li>
+              <li><a href="log.html" class="log-in">LOG IN</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <main>
+        <div class="blog-top">
+          <p>
+            <a href="index.html">Anime</a>&ensp;&ensp; /
+            <span class="active">&ensp;&ensp; Blogs</span>
+          </p>
+        </div>
+
+        <section class="blog-section">
+          <div class="blog-container">
+            <!-- Blog Grid -->
+            <div class="blog-grid">
+              <!-- Blog Card 1 -->
+              <a href="blogdetail.html" class="blog-card">
+                <img
+                  class="blog-img"
+                  src="Images/blog-img-1.png"
+                  alt="Blog Image"
+                />
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <span>28 NOV 2023</span>
+                    <span>Anime</span>
+                  </div>
+                  <h3>WHY ONE PIECE’S 948TH EPISODE</h3>
+                  <div class="blog-author">
+                    <img src="Images/comment-img.png" alt="Author" />
+                    <span>Author: Rashik</span>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Blog Card 2 -->
+              <a href="blogdetail-2.html" class="blog-card">
+                <img
+                  class="blog-img"
+                  src="Images/blog-img-2.png"
+                  alt="Blog Image"
+                />
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <span>23 SEPT 2025</span>
+                    <span>Manga</span>
+                  </div>
+                  <h3>ANIME COMMUNITY IS GOING MAD</h3>
+                  <div class="blog-author">
+                    <img src="Images/comment-img-3.png" alt="Author" />
+                    <span>Author: Jake</span>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Blog Card 3 -->
+              <a href="blogdetail-2.html" class="blog-card">
+                <img
+                  class="blog-img"
+                  src="Images/blog-img-3.png"
+                  alt="Blog Image"
+                />
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <span>15 DEC 2023</span>
+                    <span>News</span>
+                  </div>
+                  <h3>NEW SEASON ANNOUNCED!</h3>
+                  <div class="blog-author">
+                    <img src="Images/comment-img-4.png" alt="Author" />
+                    <span>Author: Sarah</span>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Blog Card 4 -->
+              <a href="blogdetail.html" class="blog-card">
+                <img
+                  class="blog-img"
+                  src="Images/dex-ezekiel-IxDPZ-AHfoI-unsplash.jpg"
+                  alt="Blog Image"
+                />
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <span>28 NOV 2024</span>
+                    <span>Review</span>
+                  </div>
+                  <h3>TOP ANIME TO WATCH</h3>
+                  <div class="blog-author">
+                    <img src="Images/comment-img-5.png" alt="Author" />
+                    <span>Author: Phillips</span>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Blog Card 5 -->
+              <a href="blogdetail.html" class="blog-card">
+                <img
+                  class="blog-img"
+                  src="Images/blog-img-5.png"
+                  alt="Blog Image"
+                />
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <span>2 NOV 2024</span>
+                    <span>Action</span>
+                  </div>
+                  <h3>BATTLE OF HEROES!</h3>
+                  <div class="blog-author">
+                    <img src="Images/comment-img-6.png" alt="Author" />
+                    <span>Author: Tom</span>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Blog Card 6 -->
+              <a href="blogdetail-2.html" class="blog-card">
+                <img
+                  class="blog-img"
+                  src="Images/manga7.png"
+                  alt="Blog Image"
+                />
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <span>12 MAY 2023</span>
+                    <span>Fantasy</span>
+                  </div>
+                  <h3>MAGICAL WORLD REVEALED</h3>
+                  <div class="blog-author">
+                    <img src="Images/comment-img-2.png" alt="Author" />
+                    <span>Author: Jessica</span>
+                  </div>
+                </div>
+              </a>
             </div>
+
+            <!-- End Blog Grid -->
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+              <!-- Search -->
+              <div class="search-box">
+                <input type="text" placeholder="Search" />
+                <i class="fa fa-search"></i>
+              </div>
+
+              <!-- Tags -->
+              <div class="tags">
+                <h3>Tags</h3>
+                <a href="search.html">Anime</a>
+                <a href="search.html">Shounen</a>
+                <a href="search.html">Super Hero</a>
+                <a href="search.html">Fantasy</a>
+                <!-- <a href="#">Action</a>
+              <a href="#">Thriller</a> -->
+              </div>
+
+              <!-- Categories -->
+              <div class="categories">
+                <h3>Categories</h3>
+                <ul>
+                  <li><a href="search.html">Anime</a></li>
+                  <li><a href="manga.html">Manga</a></li>
+                  <li><a href="search.html">Cosplay</a></li>
+                  <li><a href="mangadetail.html">Light Novel</a></li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <div class="wrap">
+          <div class="pagination" aria-label="Pagination">
+            <a class="chev" href="#" aria-label="Previous" title="Previous"
+              >&lt;</a
+            >
+
+            <a class="page active" href="#" data-page="1" aria-label="Page 1"
+              >1</a
+            >
+            <a class="page muted" href="#" data-page="2" aria-label="Page 2"
+              >2</a
+            >
+            <a class="page muted" href="#" data-page="3" aria-label="Page 3"
+              >3</a
+            >
+            <a class="page muted" href="#" data-page="4" aria-label="Page 4"
+              >4</a
+            >
+
+            <a class="chev" href="#" aria-label="Next" title="Next">&gt;</a>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer-content">
+          <!-- Left section -->
+          <div class="footer-left">
+            <a href="index.html" class="footer-logo"
+              ><img src="Images/logo.png" alt="AnimeLoop Logo"
+            /></a>
+            <p class="footer-desc">
+              AnimeLoop is your go-to platform for streaming, discovering, and
+              discussing the latest and greatest anime series and movies. Join
+              our community to stay updated, share your favorites, and connect
+              with fellow fans!
+            </p>
+
+            <div class="footer-social">
+              <h3>JOIN US ON</h3>
+              <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-reddit"></i></a>
+                <a href="#"><i class="fa-brands fa-discord"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right section -->
+          <div class="footer-right">
+            <h3>GET NOTIFIED</h3>
+            <p>Get emails for latest news about anime, and more.</p>
+            <form class="subscribe-form">
+              <input type="email" placeholder="info@example.com" required />
+              <button type="submit">Subscribe</button>
+            </form>
+            <p class="terms">
+              By subscribing you agree to our
+              <a href="#">terms and conditions</a>
+            </p>
           </div>
         </div>
 
-        <!-- Right section -->
-        <div class="footer-right">
-          <h3>GET NOTIFIED</h3>
-          <p>Get emails for latest news about anime, and more.</p>
-          <form class="subscribe-form">
-            <input type="email" placeholder="info@example.com" required />
-            <button type="submit">Subscribe</button>
-          </form>
-          <p class="terms">
-            By subscribing you agree to our <a href="#">terms and conditions</a>
-          </p>
+        <!-- Bottom bar -->
+        <div class="footer-bottom">
+          <p>© 2025 All rights reserved by Valentine.</p>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Comments Policy</a>
+          </div>
         </div>
-      </div>
+      </footer>
 
-      <!-- Bottom bar -->
-      <div class="footer-bottom">
-        <p>© 2025 All rights reserved by Valentine.</p>
-        <div class="footer-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Comments Policy</a>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" title="Go to top">
-      <i class="fa-solid fa-angles-up"></i>
-    </button>
-
+      <!-- Back to Top Button -->
+      <button id="backToTop" title="Go to top">
+        <i class="fa-solid fa-angles-up"></i>
+      </button>
+    </div>
     <script src="blog.js"></script>
   </body>
 </html>
