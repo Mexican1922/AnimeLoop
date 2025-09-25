@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anime Loop</title>
+    <link rel="stylesheet" href="chapter1.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn-icons-png.flaticon.com/512/4712/4712100.png"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html"
+          ><img src="Images/logo.png" alt="Anime Loop Logo"
+        /></a>
+      </div>
+
+      <!-- Hamburger -->
+      <div class="menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <!-- Collapsible Menu -->
+      <div class="menu-items">
+        <div class="nav-links">
+          <ul>
+            <li><a href="index.html" class="home">Home</a></li>
+            <li><a href="blog.html" class="movie">Blog</a></li>
+            <li><a href="manga.html" class="manga active">Manga</a></li>
+            <li class="pages">
+              <a href="#" id="pagesLink">Pages</a>
+              <ul class="dropdown" id="pagesDropdown">
+                <li><a href="sign.html">Sign Up</a></li>
+                <li><a href="log.html">Log In</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Search + Auth inside menu -->
+        <div class="search-auth">
+          <form action="search.html">
+            <span><i class="fa-solid fa-magnifying-glass"></i></span>
+            <input type="text" placeholder="Search" />
+          </form>
+          <ul>
+            <li><a href="sign.html" class="sign-up">SIGN UP</a></li>
+            <li><a href="log.html" class="log-in">LOG IN</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="blog-top">
+        <p>
+          <a href="index.html">Home</a>&ensp;&ensp; /
+          <a href="manga.html"><span>&ensp;&ensp; All Manga</span></a
+          >&ensp;&ensp; /
+          <a href="mangadetail.html"><span>&ensp;&ensp; Solo Leveling</span></a
+          >&ensp;&ensp; /
+          <span class="active">&ensp;&ensp; Chapter 1</span>
+        </p>
+      </div>
+
+      <section class="chapter-title">
+        <h3>SOLO LEVELING</h3>
+        <p>Chapter 179</p>
+      </section>
+
+      <div
+        class="top-bar"
+        aria-label="Header with chapter dropdown and navigation buttons"
+      >
+        <!-- Chapter dropdown -->
+        <div class="chapter-dropdown" id="chapterDropdown">
+          <button
+            class="chapter-pill"
+            id="chapterBtn"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-book"></i> CHAPTER 1
+            <i class="fa-solid fa-caret-down"></i>
+          </button>
+
+          <div
+            class="dropdown-menu"
+            id="dropdownMenu"
+            role="menu"
+            aria-label="Chapter list"
+          >
+            <div class="dropdown-item" role="menuitem" data-chapter="chapter1">
+              <i class="fa-solid fa-book-open"></i> Chapter 1
+            </div>
+            <div class="dropdown-item" role="menuitem" data-chapter="chapter2">
+              <i class="fa-solid fa-book-open"></i> Chapter 2
+            </div>
+            <div class="dropdown-item" role="menuitem" data-chapter="chapter3">
+              <i class="fa-solid fa-book-open"></i> Chapter 3
+            </div>
+            <div class="dropdown-item" role="menuitem" data-chapter="chapter4">
+              <i class="fa-solid fa-book-open"></i> Chapter 4
+            </div>
+            <div class="dropdown-item" role="menuitem" data-chapter="chapter5">
+              <i class="fa-solid fa-book-open"></i> Chapter 5
+            </div>
+          </div>
+        </div>
+
+        <!-- Right navigation -->
+        <div class="nav-buttons" aria-label="Chapter navigation">
+          <a href="#" class="prevBtn" id="prevBtn" title="Previous chapter"
+            ><i class="fa-solid fa-arrow-left"></i> Previous</a
+          >
+          <a href="#" class="nextBtn" id="nextBtn" title="Next chapter"
+            >Next <i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+
+      <section class="content" aria-label="Content area">
+        <img src="Images/image-1.png" alt="Content image" />
+      </section>
+
+      <div class="container">
+        <!-- COMMENTS -->
+        <div class="comments-section">
+          <h3>COMMENTS</h3>
+          <p class="note">
+            We hope you have a good time browsing the comment section!<br />
+            Please read our
+            <span style="color: #f5cf49">Comment Policy</span> before
+            commenting.
+          </p>
+
+          <!-- Add Comment Box -->
+          <div class="comment-box">
+            <img src="Images/comment-img.png" alt="User" />
+            <input type="text" placeholder="Join the discussion..." />
+            <button>Post</button>
+          </div>
+
+          <!-- Comment -->
+          <div class="comment">
+            <img src="Images/comment-img-2.png" alt="User" />
+            <div class="comment-body">
+              <div class="comment-header">
+                @username <span>5 minutes ago</span>
+              </div>
+              <div class="comment-text">
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                blanditiis praesentium.
+              </div>
+              <div class="comment-actions">
+                <div><i class="fa-solid fa-thumbs-up"></i> Like</div>
+                <div><i class="fa-solid fa-reply"></i> Reply</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comment with replies -->
+          <div class="comment">
+            <img src="Images/comment-img-3.png" alt="User" />
+            <div class="comment-body">
+              <div class="comment-header">
+                @username <span>5 minutes ago</span>
+              </div>
+              <div class="comment-text">
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                blanditiis praesentium.
+              </div>
+              <div class="comment-actions">
+                <div><i class="fa-solid fa-thumbs-up"></i> Like</div>
+                <div><i class="fa-solid fa-reply"></i> Reply</div>
+              </div>
+
+              <!-- Toggle Replies -->
+              <div class="view-replies">
+                <i class="fa-solid fa-angle-down"></i> 40 Replies
+              </div>
+              <div class="replies">
+                <div class="comment">
+                  <img src="Images/comment-img-sm-2.png" alt="User" />
+                  <div class="comment-body">
+                    <div class="comment-header">
+                      @username <span>3 minutes ago</span>
+                    </div>
+                    <div class="comment-text">
+                      Nested reply example content goes here.
+                    </div>
+                    <div class="comment-actions">
+                      <div><i class="fa-solid fa-thumbs-up"></i> Like</div>
+                      <div><i class="fa-solid fa-reply"></i> Reply</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Load more button -->
+          <div class="load-more">Load More Comment</div>
+        </div>
+
+        <!-- SIMILAR -->
+        <div class="similar">
+          <h3>SIMILAR</h3>
+
+          <div class="similar-item">
+            <img src="Images/anime-img-7.png" alt="Anime" />
+            <div class="similar-info">
+              <h4>86</h4>
+              <div class="tags">
+                <span class="tag">DUB 8</span>
+                <span class="tag">SUB 12</span>
+                <span class="tag tv">TV</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="similar-item">
+            <img src="Images/anime-img-8.png" alt="Anime" />
+            <div class="similar-info">
+              <h4>Re-Zero</h4>
+              <div class="tags">
+                <span class="tag">DUB 8</span>
+                <span class="tag">SUB 12</span>
+                <span class="tag yellow">18+</span>
+                <span class="tag tv">TV</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add more anime items as needed -->
+          <div class="similar-item">
+            <img src="Images/anime-img-9.png" alt="Anime" />
+            <div class="similar-info">
+              <h4>Tokyo Ghoul</h4>
+              <div class="tags">
+                <span class="tag">DUB 8</span>
+                <span class="tag">SUB 12</span>
+                <span class="tag tv">TV</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="similar-item">
+            <img src="Images/anime-img-11.png" alt="Anime" />
+            <div class="similar-info">
+              <h4>Sword Alocization</h4>
+              <div class="tags">
+                <span class="tag">DUB 8</span>
+                <span class="tag">SUB 12</span>
+                <span class="tag tv">TV</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="similar-item">
+            <img src="Images/anime-img-1.png" alt="Anime" />
+            <div class="similar-info">
+              <h4>86</h4>
+              <div class="tags">
+                <span class="tag">DUB 8</span>
+                <span class="tag">SUB 12</span>
+                <span class="tag tv">TV</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="similar-item">
+            <img src="Images/anime-img-12.png" alt="Anime" />
+            <div class="similar-info">
+              <h4>One piece</h4>
+              <div class="tags">
+                <span class="tag">DUB 8</span>
+                <span class="tag">SUB 12</span>
+                <span class="tag tv">TV</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <!-- Left section -->
+        <div class="footer-left">
+          <a href="index.html" class="footer-logo"
+            ><img src="Images/logo.png" alt="AnimeLoop Logo"
+          /></a>
+          <p class="footer-desc">
+            AnimeLoop is your go-to platform for streaming, discovering, and
+            discussing the latest and greatest anime series and movies. Join our
+            community to stay updated, share your favorites, and connect with
+            fellow fans!
+          </p>
+
+          <div class="footer-social">
+            <h3>JOIN US ON</h3>
+            <div class="social-icons">
+              <a href="#"><i class="fa-brands fa-reddit"></i></a>
+              <a href="#"><i class="fa-brands fa-discord"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right section -->
+        <div class="footer-right">
+          <h3>GET NOTIFIED</h3>
+          <p>Get emails for latest news about anime, and more.</p>
+          <form class="subscribe-form">
+            <input type="email" placeholder="info@example.com" required />
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="terms">
+            By subscribing you agree to our <a href="#">terms and conditions</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <p>© 2025 All rights reserved by Valentine.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Comments Policy</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" title="Go to top">
+      <i class="fa-solid fa-angles-up"></i>
+    </button>
+
+    <script src="chapter1.js"></script>
+  </body>
+</html>

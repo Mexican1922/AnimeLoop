@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anime Loop</title>
+    <link rel="stylesheet" href="log.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn-icons-png.flaticon.com/512/4712/4712100.png"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html"
+          ><img src="Images/logo.png" alt="Anime Loop Logo"
+        /></a>
+      </div>
+
+      <!-- Hamburger -->
+      <div class="menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <!-- Collapsible Menu -->
+      <div class="menu-items">
+        <div class="nav-links">
+          <ul>
+            <li><a href="index.html" class="home">Home</a></li>
+            <li><a href="blog.html" class="movie">Blog</a></li>
+            <li><a href="manga.html" class="manga">Manga</a></li>
+            <li class="pages">
+              <a href="#" id="pagesLink">Pages</a>
+              <ul class="dropdown" id="pagesDropdown">
+                <li><a href="sign.html">Sign Up</a></li>
+                <li><a href="log.html">Log In</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Search + Auth inside menu -->
+        <div class="search-auth">
+          <form action="search.html">
+            <span><i class="fa-solid fa-magnifying-glass"></i></span>
+            <input type="text" placeholder="Search" />
+          </form>
+          <ul>
+            <li><a href="sign.html" class="sign-up">SIGN UP</a></li>
+            <li><a href="log.html" class="log-in">LOG IN</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <section class="login-container">
+        <img src="Images/user.png" alt="User Image" class="user-img" />
+        <h1>LOG IN</h1>
+
+        <!-- Social Logins -->
+        <div class="social-login">
+          <div class="social-btn google">
+            <a href="#">
+              <img src="Images/google.png" alt="Google Icon" />
+              <p>Continue with Google</p>
+            </a>
+          </div>
+
+          <div class="social-btn facebook">
+            <a href="#">
+              <img src="Images/facebook-icon.png" alt="Facebook Icon" />
+              <p>Continue with Facebook</p>
+            </a>
+          </div>
+
+          <div class="social-btn email">
+            <a href="#">
+              <img src="Images/email-icon.png" alt="Email Icon" />
+              <p>Continue with Email</p>
+            </a>
+          </div>
+        </div>
+
+        <p class="divider">or log in with email</p>
+
+        <!-- Regular Login Form -->
+        <form action="" class="login-form">
+          <div class="input-group">
+            <input type="email" placeholder="Email address" required />
+          </div>
+
+          <div class="input-group">
+            <input
+              type="password"
+              placeholder="Enter password"
+              id="login-password"
+              required
+            />
+            <span
+              class="toggle-password"
+              onclick="togglePassword('login-password', this)"
+            >
+              <i class="fa-solid fa-eye"></i>
+            </span>
+          </div>
+
+          <!-- Forgot Password -->
+          <div class="forgot-password">
+            <a href="forgot-password.html">Forgot Password?</a>
+          </div>
+
+          <button type="submit">LOG IN</button>
+        </form>
+
+        <p class="incase">Create an account? <a href="sign.html">Sign up</a></p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <!-- Left section -->
+        <div class="footer-left">
+          <a href="index.html" class="footer-logo"
+            ><img src="Images/logo.png" alt="AnimeLoop Logo"
+          /></a>
+          <p class="footer-desc">
+            AnimeLoop is your go-to platform for streaming, discovering, and
+            discussing the latest and greatest anime series and movies. Join our
+            community to stay updated, share your favorites, and connect with
+            fellow fans!
+          </p>
+
+          <div class="footer-social">
+            <h3>JOIN US ON</h3>
+            <div class="social-icons">
+              <a href="#"><i class="fa-brands fa-reddit"></i></a>
+              <a href="#"><i class="fa-brands fa-discord"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right section -->
+        <div class="footer-right">
+          <h3>GET NOTIFIED</h3>
+          <p>Get emails for latest news about anime, and more.</p>
+          <form class="subscribe-form">
+            <input type="email" placeholder="info@example.com" required />
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="terms">
+            By subscribing you agree to our <a href="#">terms and conditions</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <p>© 2025 All rights reserved by Valentine.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Comments Policy</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="log.js"></script>
+  </body>
+</html>

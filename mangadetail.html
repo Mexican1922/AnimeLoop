@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anime Loop</title>
+    <link rel="stylesheet" href="mangadetail.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn-icons-png.flaticon.com/512/4712/4712100.png"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html"
+          ><img src="Images/logo.png" alt="Anime Loop Logo"
+        /></a>
+      </div>
+
+      <!-- Hamburger -->
+      <div class="menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <!-- Collapsible Menu -->
+      <div class="menu-items">
+        <div class="nav-links">
+          <ul>
+            <li><a href="index.html" class="home">Home</a></li>
+            <li><a href="blog.html" class="movie">Blog</a></li>
+            <li><a href="manga.html" class="manga active">Manga</a></li>
+            <li><a href="#" class="pages">Pages</a></li>
+          </ul>
+        </div>
+
+        <!-- Search + Auth inside menu -->
+        <div class="search-auth">
+          <form action="search.html">
+            <span><i class="fa-solid fa-magnifying-glass"></i></span>
+            <input type="text" placeholder="Search" />
+          </form>
+          <ul>
+            <li><a href="sign.html" class="sign-up">SIGN UP</a></li>
+            <li><a href="log.html" class="log-in">LOG IN</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="blog-top">
+        <p>
+          <a href="index.html">Home</a>&ensp;&ensp; /
+          <a href="manga.html"><span>&ensp;&ensp; All Manga</span></a
+          >&ensp;&ensp; /
+          <span class="active">&ensp;&ensp; Solo Leveling</span>
+        </p>
+      </div>
+
+      <section class="summary-section">
+        <div>
+          <img src="Images/manga-img-1.png" alt="Manga detail image" />
+        </div>
+        <div class="summary">
+          <h3>Solo Leveling</h3>
+
+          <div class="chapter-row">
+            <p>Chapter 179</p>
+            <span class="menu">
+              <i class="fa-solid fa-list menu-icon"></i>
+              <span class="dropdown">
+                <a href="mangadetail.html"
+                  ><i class="fa-regular fa-clock"></i> Watch Later</a
+                >
+                <a href="mangadetail.html"
+                  ><i class="fa-solid fa-plus"></i> Add to Playlist</a
+                >
+              </span>
+            </span>
+          </div>
+
+          <p class="plot-title">Plot Summary</p>
+          <p class="plot">
+            In a world where mysterious portals known as <em>Gates</em> connect
+            Earth to dangerous dungeons filled with monsters, humanity relies on
+            Hunters—individuals gifted with magical abilities—to fight back.
+            Sung Jin-woo, often called “the world’s weakest hunter,” gains a
+            mysterious System that lets him grow stronger without limits. From
+            weak E-rank to unmatched strength, his journey uncovers deadly
+            secrets hidden within the Gates.
+          </p>
+
+          <ul>
+            <li><a href="chapter1.html" class="read-up">READ FIRST</a></li>
+            <li><a href="chapter1.html" class="read-in">READ LAST</a></li>
+          </ul>
+        </div>
+
+        <div class="summary-credits">
+          <p>Manga Details</p>
+          <p>Author: <span>Chugong</span></p>
+          <p>Artist: <span>Jang Sung-Rak</span></p>
+          <p>Date of release: <span>March 4, 2018</span></p>
+          <p>Status: <span>Completed</span></p>
+          <p>Genre: <span>Action, Fantasy</span></p>
+          <p>Country: <span>South Korea</span></p>
+          <p>Scores: <span>2.53 by 4,405 reviews</span></p>
+          <p>Views: <span>18,284</span></p>
+        </div>
+      </section>
+
+      <section class="manga-section">
+        <!-- Left: Manga Releases -->
+        <div class="manga-releases">
+          <h2>Manga Releases</h2>
+          <ul id="release-list">
+            <!-- Chapters will be injected here by JS -->
+          </ul>
+          <button class="show-more" id="showMoreBtn">Show More</button>
+        </div>
+
+        <!-- Right: Top Rated Manga -->
+        <div class="top-rated">
+          <h2>Top Rated Manga</h2>
+          <div class="manga-card">
+            <img src="Images/anime-img-7.png" alt="86" />
+            <div>
+              <h3>86</h3>
+              <p>Chapter 129</p>
+            </div>
+          </div>
+          <div class="manga-card">
+            <img src="Images/anime-img-8.png" alt="Re-Zero" />
+            <div>
+              <h3>Re-Zero <span class="badge">18+</span></h3>
+              <p>Chapter 169</p>
+            </div>
+          </div>
+          <div class="manga-card">
+            <img src="Images/anime-img-9.png" alt="Tokyo Ghoul" />
+            <div>
+              <h3>Tokyo Ghoul</h3>
+              <p>Chapter 279</p>
+            </div>
+          </div>
+          <div class="manga-card">
+            <img src="Images/anime-img-11.png" alt="Sword Art Online" />
+            <div>
+              <h3>Sword Art Online</h3>
+              <p>Chapter 223</p>
+            </div>
+          </div>
+          <div class="manga-card">
+            <img
+              src="Images/anime-img-2.png"
+              alt="Sword Art Online: Alicization"
+            />
+            <div>
+              <h3>Sword Art Online: Alicization</h3>
+              <p>Chapter 94</p>
+            </div>
+          </div>
+          <div class="manga-card">
+            <img src="Images/anime-img-12.png" alt="One Piece" />
+            <div>
+              <h3>One Piece</h3>
+              <p>Chapter 1016</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="comment-container">
+        <!-- COMMENTS -->
+        <div class="comments-section">
+          <h3>COMMENTS</h3>
+          <p class="note">
+            We hope you have a good time browsing the comment section!<br />
+            Please read our
+            <span style="color: #f5cf49">Comment Policy</span> before
+            commenting.
+          </p>
+
+          <!-- Add Comment Box -->
+          <div class="comment-box">
+            <img src="Images/comment-img.png" alt="User" />
+            <input type="text" placeholder="Join the discussion..." />
+            <button>Post</button>
+          </div>
+
+          <!-- Comment -->
+          <div class="comment">
+            <img src="Images/comment-img-2.png" alt="User" />
+            <div class="comment-body">
+              <div class="comment-header">
+                @username <span>5 minutes ago</span>
+              </div>
+              <div class="comment-text">
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                blanditiis praesentium.
+              </div>
+              <div class="comment-actions">
+                <div><i class="fa-solid fa-thumbs-up"></i> Like</div>
+                <div><i class="fa-solid fa-reply"></i> Reply</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comment with replies -->
+          <div class="comment">
+            <img src="Images/comment-img-3.png" alt="User" />
+            <div class="comment-body">
+              <div class="comment-header">
+                @username <span>5 minutes ago</span>
+              </div>
+              <div class="comment-text">
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                blanditiis praesentium.
+              </div>
+              <div class="comment-actions">
+                <div><i class="fa-solid fa-thumbs-up"></i> Like</div>
+                <div><i class="fa-solid fa-reply"></i> Reply</div>
+              </div>
+
+              <!-- Toggle Replies -->
+              <div class="view-replies">
+                <i class="fa-solid fa-angle-down"></i> 40 Replies
+              </div>
+              <div class="replies">
+                <div class="comment">
+                  <img src="Images/comment-img-sm-2.png" alt="User" />
+                  <div class="comment-body">
+                    <div class="comment-header">
+                      @username <span>3 minutes ago</span>
+                    </div>
+                    <div class="comment-text">
+                      Nested reply example content goes here.
+                    </div>
+                    <div class="comment-actions">
+                      <div><i class="fa-solid fa-thumbs-up"></i> Like</div>
+                      <div><i class="fa-solid fa-reply"></i> Reply</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Load more button -->
+          <div class="load-more">Load More Comment</div>
+        </div>
+
+        <!-- SIMILAR -->
+        <div class="similar">
+          <h3>SIMILAR</h3>
+
+          <div class="similar-item">
+            <img src="Images/anime-img-7.png" alt="Anime" />
+            <div class="similar-info">
+              <h4>86</h4>
+              <div class="tags">
+                <span class="tag">DUB 8</span>
+                <span class="tag">SUB 12</span>
+                <span class="tag tv">TV</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="similar-item">
+            <img src="Images/anime-img-8.png" alt="Anime" />
+            <div class="similar-info">
+              <h4>Re-Zero</h4>
+              <div class="tags">
+                <span class="tag">DUB 8</span>
+                <span class="tag">SUB 12</span>
+                <span class="tag yellow">18+</span>
+                <span class="tag tv">TV</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add more anime items as needed -->
+          <div class="similar-item">
+            <img src="Images/anime-img-9.png" alt="Anime" />
+            <div class="similar-info">
+              <h4>Tokyo Ghoul</h4>
+              <div class="tags">
+                <span class="tag">DUB 8</span>
+                <span class="tag">SUB 12</span>
+                <span class="tag tv">TV</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="similar-item">
+            <img src="Images/anime-img-11.png" alt="Anime" />
+            <div class="similar-info">
+              <h4>Sword Alocization</h4>
+              <div class="tags">
+                <span class="tag">DUB 8</span>
+                <span class="tag">SUB 12</span>
+                <span class="tag tv">TV</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="similar-item">
+            <img src="Images/anime-img-1.png" alt="Anime" />
+            <div class="similar-info">
+              <h4>86</h4>
+              <div class="tags">
+                <span class="tag">DUB 8</span>
+                <span class="tag">SUB 12</span>
+                <span class="tag tv">TV</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="similar-item">
+            <img src="Images/anime-img-12.png" alt="Anime" />
+            <div class="similar-info">
+              <h4>One piece</h4>
+              <div class="tags">
+                <span class="tag">DUB 8</span>
+                <span class="tag">SUB 12</span>
+                <span class="tag tv">TV</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <h3>Similar</h3>
+            <ul>
+              <li>
+                <img
+                  src="Images/Demon Slayer Posters.jpeg"
+                  alt="Demon Slayer"
+                /><span>Demon Slayer</span>
+              </li>
+              <li>
+                <img
+                  src="Images/3fcc3b1b-38c4-493c-baaa-cae66700dbfe.jpeg"
+                  alt="Black Clover"
+                /><span>Black Clover</span>
+              </li>
+              <li>
+                <img
+                  src="Images/Naruto HD Wallpaper 💙.jpeg"
+                  alt="Naruto"
+                /><span>Naruto</span>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </section> -->
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <!-- Left section -->
+        <div class="footer-left">
+          <a href="index.html" class="footer-logo"
+            ><img src="Images/logo.png" alt="AnimeLoop Logo"
+          /></a>
+          <p class="footer-desc">
+            AnimeLoop is your go-to platform for streaming, discovering, and
+            discussing the latest and greatest anime series and movies. Join our
+            community to stay updated, share your favorites, and connect with
+            fellow fans!
+          </p>
+
+          <div class="footer-social">
+            <h3>JOIN US ON</h3>
+            <div class="social-icons">
+              <a href="#"><i class="fa-brands fa-reddit"></i></a>
+              <a href="#"><i class="fa-brands fa-discord"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right section -->
+        <div class="footer-right">
+          <h3>GET NOTIFIED</h3>
+          <p>Get emails for latest news about anime, and more.</p>
+          <form class="subscribe-form">
+            <input type="email" placeholder="info@example.com" required />
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="terms">
+            By subscribing you agree to our <a href="#">terms and conditions</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <p>© 2025 All rights reserved by Valentine.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Comments Policy</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" title="Go to top">
+      <i class="fa-solid fa-angles-up"></i>
+    </button>
+
+    <script src="mangadetail.js"></script>
+  </body>
+</html>
