@@ -1,0 +1,26 @@
+MIT License
+
+Design Description
+AnimeLoop has a vibrant, modern design for anime fans:
+Colors: Dark background with bright accent colors for titles and buttons
+Typography: Bold headings for series titles, readable body text
+Layout: Grid structure for featured anime, lists, and weekly schedules
+Imagery: High-quality banners and thumbnails
+Interactivity: DUB/SUB toggles, episode play buttons, hover effects
+Future Improvements
+Add backend for community logins and user profiles
+Implement search and filter functionality
+Optimize SEO and performance
+Add ratings, comments, and user playlists
+Contributing
+Fork this repository
+Create a branch (git checkout -b feature-update)
+Commit your changes (git commit -m "Added feature")
+Push to your branch (git push origin feature-update)
+Open a Pull Request
+License
+This project is licensed under the MIT License.
+Author
+Valentine Chibizor
+Email: valentinechibuzor480@gmail.com
+Live Demo: https://animeloop-5hiw.onrender.com
