@@ -57,3 +57,9 @@ Key sections include:
 
 ## Project Structure
 animeloop/ │ ├── index.html ├── blog.html ├── manga.html ├── signup.html ├── login.html │ ├── /css │   └── style.css ├── /js │   └── main.js ├── /images │   ├── banners/ │   └── thumbnails/
+
+
+
+## License
+
+This project is licensed under the [MIT License](./LICENSE).
