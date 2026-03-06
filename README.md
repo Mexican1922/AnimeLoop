@@ -56,9 +56,53 @@ Key sections include:
 ---
 
 ## Project Structure
-animeloop/ │ ├── index.html ├── blog.html ├── manga.html ├── signup.html ├── login.html │ ├── /css │   └── style.css ├── /js │   └── main.js ├── /images │   ├── banners/ │   └── thumbnails/
+
+```text
+animeloop/
+├── index.html
+├── blog.html
+├── manga.html
+├── sign.html
+├── log.html
+├── global.css
+├── styles.css
+├── global.js
+├── script.js
+├── api.js
+└── Images/
+```
 
 
+
+## Setup / Getting Started
+
+To run this project locally, follow these steps:
+
+1.  **Clone the repository:**
+    ```bash
+    git clone <repository-url>
+    cd <project-directory>
+    ```
+
+2.  **Serve the files:**
+    Since this is a static website, you can serve the files using any simple web server. For example, using Python:
+    ```bash
+    python3 -m http.server
+    ```
+
+3.  **Open in browser:**
+    Navigate to `http://localhost:8000` in your web browser.
+
+---
+
+## Usage
+
+-   **Browse Anime:** Scroll through the home page to discover trending and recently updated anime.
+-   **Explore Categories:** Use the navigation menu to visit different sections like **Blog** and **Manga**.
+-   **Community Interaction:** Click on **Sign Up** or **Log In** to engage with the community (UI pages are provided).
+-   **Stay Updated:** Use the subscription form in the footer to get notified about new releases and updates.
+
+---
 
 ## License
 
