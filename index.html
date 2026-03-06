@@ -1,9 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anime Loop</title>
+    <title>Anime Loop – Watch & Discover Anime</title>
+    <meta
+      name="description"
+      content="AnimeLoop – your go-to platform for streaming, discovering, and discussing the best anime series and movies. Browse popular, new, and seasonal anime."
+    />
+    <link rel="stylesheet" href="global.css" />
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;700&display=swap"
@@ -160,17 +165,29 @@
         <button class="arrow right">
           <i class="fa-solid fa-chevron-right"></i>
         </button>
+        <!-- Slide Dots -->
+        <div class="slide-dots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+        </div>
       </header>
 
       <main>
         <section class="recently-added">
           <div class="recently-added-title">
             <h4>RECENTLY UPDATED</h4>
-            <p>SUNDAY 23 SEPT 2025</p>
+            <p id="today-date">LOADING...</p>
+          </div>
+        </section>
+        <section>
+          <div id="api-recently-grid" class="anime-grid">
+            <!-- API-injected recently airing anime cards -->
           </div>
         </section>
         <section>
           <div class="anime-grid">
+            <!-- Static anime cards (shown alongside API results) -->
             <!-- Example Card -->
             <div class="anime-card">
               <img
@@ -473,8 +490,9 @@
           <h4>POPULAR ANIME</h4>
         </div>
 
-        <div class="anime-flex">
-          <!-- Example Card -->
+        <!-- API-powered popular anime: loaded by script.js -->
+        <div id="api-popular-grid" class="anime-flex">
+          <!-- Static fallback cards below shown until API loads -->
           <div class="animeloop-card">
             <img
               src="Images/a9b4ee8e-0f83-4e81-886a-4e406c0cceb4.jpeg"
@@ -1221,7 +1239,7 @@
           <div class="footer-right">
             <h3>GET NOTIFIED</h3>
             <p>Get emails for latest news about anime, and more.</p>
-            <form class="subscribe-form">
+            <form class="subscribe-form" id="subscribe-form">
               <input type="email" placeholder="info@example.com" required />
               <button type="submit">Subscribe</button>
             </form>
@@ -1234,7 +1252,15 @@
 
         <!-- Bottom bar -->
         <div class="footer-bottom">
-          <p>© 2025 All rights reserved by Valentine.</p>
+          <p>
+            © 2025 All rights reserved. Designed by
+            <a
+              href="https://valentine-azolibe.vercel.app"
+              target="_blank"
+              style="color: #fbc531; text-decoration: none"
+              >ValentineCodes</a
+            >
+          </p>
           <div class="footer-links">
             <a href="#">Privacy Policy</a>
             <a href="#">Comments Policy</a>
@@ -1246,8 +1272,30 @@
       <button id="backToTop" title="Go to top">
         <i class="fa-solid fa-angles-up"></i>
       </button>
+      <!-- Toast notification -->
+      <div
+        id="subscribe-toast"
+        style="
+          display: none;
+          position: fixed;
+          bottom: 80px;
+          right: 24px;
+          background: #7c3aed;
+          color: #fff;
+          padding: 12px 22px;
+          border-radius: 8px;
+          font-size: 0.9rem;
+          z-index: 9999;
+          box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+          animation: slideUp 0.3s ease;
+        "
+      >
+        ✅ You're subscribed!
+      </div>
     </div>
 
+    <script src="api.js"></script>
     <script src="script.js"></script>
+    <script src="global.js"></script>
   </body>
 </html>

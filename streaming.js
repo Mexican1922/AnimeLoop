@@ -1,4 +1,4 @@
-// blogdetail.js
+// streaming.js
 
 // Simulate loading time
 window.addEventListener("load", function () {
@@ -264,25 +264,6 @@ const episodeSources = {
 
 // Grab the download button
 const downloadBtn = document.getElementById("downloadBtn");
-
-// Function that runs when an episode is selected
-function loadEpisode(season, episodeIndex) {
-  const source = episodeSources[season][episodeIndex];
-
-  if (!source) return;
-
-  if (source.type === "video") {
-    // Set up the download link
-    downloadBtn.href = source.download;
-    downloadBtn.setAttribute("download", `Episode-${episodeIndex + 1}.mp4`);
-    downloadBtn.style.display = "inline-flex"; // show
-  } else {
-    // Hide for iframe/streaming episodes
-    downloadBtn.style.display = "none";
-  }
-
-  // TODO: Add your video/iframe player switching code here
-}
 
 // ▶ Load an episode (handles both video & iframe)
 function loadEpisode(ep) {

@@ -9,146 +9,6 @@ body {
   color: #fff;
 }
 
-/* Fullscreen Loader */
-#loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #121212; /* dark bg */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  z-index: 9999;
-  color: #fff;
-}
-
-#loader img {
-  width: 250px; /* adjust GIF size */
-  height: auto;
-}
-
-.container {
-  display: flex;
-  flex-direction: row;
-}
-
-/* ===== NAVBAR ===== */
-.navbar {
-  width: 300px;
-  background: #121212;
-  padding: 20px;
-  height: 96vh;
-}
-
-.logo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 150px;
-}
-.logo img {
-  height: 35px;
-  width: auto;
-}
-.hamburger {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: #fff;
-}
-
-.menu-items {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-form {
-  display: flex;
-  align-items: center;
-  background: #242424;
-  border: 2px solid #888;
-  border-radius: 8px;
-  padding: 5px 10px;
-}
-form span {
-  color: #888;
-  margin-right: 8px;
-}
-form input {
-  border: none;
-  outline: none;
-  background: transparent;
-  color: #fff;
-  flex: 1;
-}
-
-.nav-links ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.nav-links ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s;
-}
-.nav-links ul li a:hover {
-  color: #a958a5;
-}
-.nav-links .active {
-  color: #f5cf49;
-
-  &&:hover {
-    color: #f5cf49;
-  }
-}
-
-.menu-items {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  margin-top: 10px;
-  /* background-color: ; */
-}
-
-.search-auth ul li {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-bottom: 10px;
-}
-.search-auth ul li a {
-  padding: 8px;
-  text-align: center;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-}
-.sign-up {
-  border: 2px solid #f5cf49;
-  color: #fff;
-}
-.sign-up:hover {
-  background: #f5cf49;
-  color: #121212;
-}
-.log-in {
-  border: 2px solid #a958a5;
-  color: #fff;
-}
-.log-in:hover {
-  background: #a958a5;
-  color: #fff;
-}
-
 /* ===== MANGA SECTION ===== */
 .manga-section {
   flex: 1;
@@ -409,7 +269,9 @@ main {
   transform: translateY(20px);
   pointer-events: none;
 
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .dropdown a {
@@ -755,7 +617,9 @@ main {
   transform: translateY(20px);
   pointer-events: none;
 
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .dropdown a {
@@ -1013,7 +877,9 @@ main {
   gap: 15px;
   border-bottom: 1px solid #333;
   padding-bottom: 15px;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
 }
 
 .schedule .anime-item:hover {
@@ -1169,7 +1035,9 @@ main {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
   text-decoration: none;
   color: inherit;
-  transition: background 0.15s ease, transform 0.15s ease;
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease;
 }
 
 .grid-section .rank {
@@ -1261,7 +1129,9 @@ main {
   gap: 15px;
   text-decoration: none; /* remove link underline */
   color: inherit;
-  transition: transform 0.3s ease, background 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
 }
 
 .blog-card:hover {
@@ -1517,31 +1387,4 @@ main {
   .social-icons a {
     font-size: 1.5rem;
   }
-}
-
-#backToTop {
-  display: none; /* hidden by default */
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 99;
-  border: none;
-  outline: none;
-  background-color: #f5cf49; /* circle color */
-  color: black;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 50%;
-  font-size: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-#backToTop:hover {
-  background-color: #edbe23;
-  transform: scale(1.1);
-}
-
-#backToTop i {
-  font-size: 22px;
 }

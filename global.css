@@ -1,0 +1,848 @@
+/* ============================================================
+   global.css — Shared base styles for ALL AnimeLoop pages
+   Fixes: sticky navbar, mobile nav UX, consistent cards,
+          touch-friendly tap targets, footer responsive,
+          smooth transitions site-wide.
+   ============================================================ */
+
+/* ─── CSS Custom Properties ─── */
+:root {
+  --clr-bg: #1a1a1a;
+  --clr-bg-2: #111111;
+  --clr-surface: #242424;
+  --clr-surface-2: #2a2a2a;
+  --clr-gold: #f5cf49;
+  --clr-purple: #a958a5;
+  --clr-purple-2: #7c3aed;
+  --clr-text: #f4f4f4;
+  --clr-muted: #b4b4b4;
+  --clr-dim: #888;
+  --nav-h: 68px;
+  --radius: 10px;
+  --transition: 0.28s ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--clr-bg);
+  color: var(--clr-text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ─── STICKY NAVBAR ──────────────────────────────────────── */
+.navbar {
+  background: rgba(18, 18, 18, 0.97);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #fff;
+  padding: 0 5%;
+  height: var(--nav-h);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: box-shadow var(--transition);
+}
+
+.navbar.scrolled {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .logo img {
+  height: 36px;
+  width: auto;
+  display: block;
+}
+
+/* ─── HAMBURGER ─────────────────────────────────────────── */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1100;
+  padding: 6px;
+  border-radius: 6px;
+  transition: background var(--transition);
+  background: transparent;
+  border: none;
+}
+
+.menu-toggle:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ─── MENU ITEMS ────────────────────────────────────────── */
+.menu-items {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+.nav-links ul li a {
+  color: var(--clr-muted);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+  transition: color var(--transition);
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+  letter-spacing: 0.02em;
+}
+
+.nav-links ul li a:hover,
+.nav-links ul li a.active-link {
+  color: #fff;
+  border-bottom-color: var(--clr-gold);
+}
+
+.nav-links .active a,
+.nav-links .active {
+  color: var(--clr-gold) !important;
+}
+
+/* ─── SEARCH BAR ────────────────────────────────────────── */
+.search-auth {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.search-auth ul {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+}
+
+.search-auth form,
+.navbar form {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  border-radius: 24px;
+  padding: 6px 14px;
+  width: 220px;
+  transition:
+    border-color var(--transition),
+    background var(--transition);
+}
+
+.search-auth form:focus-within,
+.navbar form:focus-within {
+  border-color: var(--clr-purple);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.search-auth form span,
+.navbar form span {
+  color: var(--clr-dim);
+  font-size: 14px;
+  margin-right: 6px;
+}
+
+.search-auth form input,
+.navbar form input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+  color: #fff;
+  background: transparent;
+}
+
+.search-auth form input::placeholder,
+.navbar form input::placeholder {
+  color: var(--clr-dim);
+}
+
+/* ─── AUTH BUTTONS ──────────────────────────────────────── */
+.search-auth ul li a.sign-up,
+.search-auth ul li a.log-in {
+  padding: 7px 16px;
+  border-radius: 6px;
+  transition: all var(--transition);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.search-auth ul li a.sign-up {
+  border: 2px solid var(--clr-gold);
+  color: var(--clr-gold);
+}
+.search-auth ul li a.sign-up:hover {
+  background: var(--clr-gold);
+  color: #111;
+}
+
+.search-auth ul li a.log-in {
+  border: 2px solid var(--clr-purple);
+  color: #fff;
+}
+.search-auth ul li a.log-in:hover {
+  background: var(--clr-purple);
+}
+
+/* ─── PAGES DROPDOWN ─────────────────────────────────────── */
+.pages {
+  position: relative;
+}
+
+.pages .dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: #1e1e1e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  min-width: 130px;
+  padding: 6px 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  list-style: none;
+}
+
+.pages .dropdown li a {
+  display: block;
+  padding: 9px 16px;
+  color: var(--clr-muted);
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition:
+    background var(--transition),
+    color var(--transition);
+  border: none !important;
+}
+
+.pages .dropdown li a:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: #fff;
+}
+.pages .show-dropdown {
+  display: block !important;
+}
+
+/* ─── LOADER ─────────────────────────────────────────────── */
+#loader {
+  position: fixed;
+  inset: 0;
+  background: var(--clr-bg-2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+  color: #fff;
+}
+
+#loader img {
+  width: 220px;
+  height: auto;
+}
+
+/* ─── BACK TO TOP ────────────────────────────────────────── */
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 28px;
+  right: 24px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--clr-gold);
+  color: #111;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 4px 16px rgba(245, 207, 73, 0.4);
+  transition:
+    background var(--transition),
+    transform var(--transition);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+#backToTop:hover {
+  background: #e6be30;
+  transform: translateY(-3px);
+}
+
+/* ─── SUBSCRIBE TOAST ────────────────────────────────────── */
+#subscribe-toast {
+  position: fixed;
+  bottom: 80px;
+  right: 24px;
+  background: linear-gradient(135deg, var(--clr-purple-2), var(--clr-purple));
+  color: #fff;
+  padding: 13px 22px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  z-index: 9999;
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.45);
+  animation: slideUp 0.35s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─── FOOTER ─────────────────────────────────────────────── */
+.footer {
+  background: url("Images/footer-bg-2.png") no-repeat center/cover;
+  color: #fff;
+  padding: 60px 5% 20px;
+  position: relative;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.75);
+  pointer-events: none;
+}
+
+.footer-content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-left {
+  flex: 1;
+  min-width: 240px;
+}
+.footer-logo {
+  display: block;
+  margin-bottom: 14px;
+}
+.footer-logo img {
+  max-width: 140px;
+  height: auto;
+}
+.footer-desc {
+  color: #bbb;
+  line-height: 1.7;
+  margin-bottom: 22px;
+  font-size: 0.9rem;
+}
+
+.footer-social h3 {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+}
+.social-icons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.social-icons a {
+  font-size: 1.6rem;
+  color: #ccc;
+  transition:
+    color var(--transition),
+    transform var(--transition);
+}
+.social-icons a:hover {
+  color: var(--clr-gold);
+  transform: translateY(-3px);
+}
+
+.footer-right {
+  flex: 1;
+  min-width: 240px;
+}
+.footer-right h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+.footer-right p {
+  color: #bbb;
+  margin-bottom: 14px;
+  font-size: 0.9rem;
+}
+
+.subscribe-form {
+  display: flex;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  max-width: 380px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.subscribe-form input {
+  flex: 1;
+  padding: 12px 14px;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+  background: transparent;
+  color: #fff;
+}
+
+.subscribe-form input::placeholder {
+  color: #888;
+}
+
+.subscribe-form button {
+  background: var(--clr-gold);
+  color: #111;
+  padding: 12px 18px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition);
+  font-size: 0.9rem;
+}
+
+.subscribe-form button:hover {
+  background: #e6be30;
+}
+
+.footer-bottom {
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 40px;
+  padding-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  color: #888;
+  gap: 10px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.footer-links a {
+  color: #888;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+.footer-links a:hover {
+  color: var(--clr-gold);
+}
+.terms {
+  font-size: 0.8rem;
+  color: #777;
+}
+.terms a {
+  color: var(--clr-gold);
+}
+
+/* ─── ANIME CARD (shared across all pages) ───────────────── */
+.anime-card,
+.animeloop-card {
+  background: var(--clr-surface-2);
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+  cursor: pointer;
+}
+
+.anime-card:hover,
+.animeloop-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+.anime-card img,
+.animeloop-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: var(--radius) var(--radius) 0 0;
+  display: block;
+  transition: transform var(--transition);
+}
+
+.anime-card:hover img,
+.animeloop-card:hover img {
+  transform: scale(1.04);
+}
+
+.card-info {
+  padding: 10px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.anime-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--clr-text);
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.tags a,
+.tags span {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--clr-muted);
+  font-size: 0.72rem;
+  padding: 3px 7px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background var(--transition);
+}
+
+.tags a:hover {
+  background: var(--clr-gold);
+  color: #111;
+}
+
+/* ─── CARD OVERLAY ───────────────────────────────────────── */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity var(--transition);
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.anime-card:hover .overlay,
+.animeloop-card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay i,
+.overlay a {
+  font-size: 2rem;
+  color: var(--clr-gold);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 13px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: transform var(--transition);
+}
+
+.overlay i:hover,
+.overlay a:hover {
+  transform: scale(1.15);
+}
+
+/* ─── CARD MENU ──────────────────────────────────────────── */
+.menu {
+  position: absolute;
+  bottom: 12px;
+  right: 10px;
+  z-index: 2;
+}
+
+.menu-icon {
+  font-size: 1.2rem;
+  color: var(--clr-muted);
+  cursor: pointer;
+  transition: color var(--transition);
+}
+
+.menu-icon:hover {
+  color: var(--clr-gold);
+}
+
+.menu .dropdown {
+  position: absolute;
+  bottom: 36px;
+  right: 0;
+  background: #2a2a2a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  z-index: 20;
+  min-width: 150px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition:
+    opacity var(--transition),
+    transform var(--transition);
+}
+
+.menu.open .dropdown {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.menu .dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  color: #fff;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: background var(--transition);
+  white-space: nowrap;
+  border: none;
+}
+
+.menu .dropdown a:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--clr-purple);
+}
+
+/* ─── ANIME GRID (shared) ────────────────────────────────── */
+.anime-grid,
+.anime-flex {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* ─── SCORE / EP BADGES ──────────────────────────────────── */
+.score-badge {
+  background: linear-gradient(135deg, var(--clr-purple-2), var(--clr-purple));
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 7px;
+  border-radius: 4px;
+}
+
+.ep-count {
+  font-size: 0.75rem;
+  color: var(--clr-dim);
+}
+
+/* ─── SECTION TITLE (reused across all pages) ─────────────── */
+.section-title {
+  font-size: clamp(1.5rem, 2vw + 1rem, 2.6rem);
+  font-weight: 700;
+  color: var(--clr-text);
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/*  RESPONSIVE BREAKPOINTS                                     */
+/* ─────────────────────────────────────────────────────────── */
+
+/* Tablet ≤ 1024px */
+@media (max-width: 1024px) {
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-items {
+    display: none;
+    position: absolute;
+    top: var(--nav-h);
+    left: 0;
+    right: 0;
+    background: rgba(14, 14, 14, 0.98);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 5%;
+    gap: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 999;
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  .navbar.active .menu-items {
+    display: flex;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .nav-links ul li a {
+    font-size: 1rem;
+    padding: 4px 0;
+  }
+
+  .search-auth {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .search-auth form,
+  .navbar form {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .search-auth ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+/* Mobile ≤ 600px */
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0 4%;
+    height: 58px;
+    --nav-h: 58px;
+  }
+  .navbar .logo img {
+    height: 28px;
+  }
+
+  .anime-grid,
+  .anime-flex {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .anime-card img,
+  .animeloop-card img {
+    height: 180px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .subscribe-form {
+    flex-direction: column;
+    max-width: 100%;
+  }
+  .subscribe-form input {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .subscribe-form button {
+    width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+  }
+}
+
+/* Very small ≤ 380px */
+@media (max-width: 380px) {
+  .anime-grid,
+  .anime-flex {
+    grid-template-columns: 1fr;
+  }
+  .anime-card img,
+  .animeloop-card img {
+    height: 220px;
+  }
+}
+
+/* ─── ANIMATIONS ─────────────────────────────────────────── */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─── SCROLLBARS ─────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--clr-bg-2);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--clr-purple);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--clr-gold);
+}
+
+/* ─── STICKY NAV SCROLL SHADOW via JS class ─────────────── */
+/* (JS adds .scrolled to .navbar on window scroll) */
+
+/* ─── API SPINNER ────────────────────────────────────────── */
+#api-spinner {
+  text-align: center;
+  padding: 2rem;
+  color: var(--clr-purple-2);
+  font-size: 1.4rem;
+}
+
+/* ─── FOCUS VISIBLE (Accessibility) ─────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--clr-gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
